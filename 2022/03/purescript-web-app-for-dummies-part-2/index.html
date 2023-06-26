@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureScript web app for dummies - part 2 &middot; Tiago on tech</title>
+
+    <meta name="description" content="A dead simple guide of how to make a web app using purescript - part 2">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="PureScript web app for dummies - part 2 &middot; Tiago on tech">
+    <meta name="twitter:description" content="A dead simple guide of how to make a web app using purescript - part 2">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PureScript web app for dummies - part 2 &middot; Tiago on tech">
+    <meta property="og:description" content="A dead simple guide of how to make a web app using purescript - part 2">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">07 Mar 2022, 23:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/" class="post-title">PureScript web app for dummies - part 2</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-PureScript" href='https://tiago.dalligna.com/tags/PureScript'>PureScript</a>
+                                
+                                    <a class="post-category post-category-purs" href='https://tiago.dalligna.com/tags/purs'>purs</a>
+                                
+                                    <a class="post-category post-category-spork" href='https://tiago.dalligna.com/tags/spork'>spork</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p><img src="https://www.purescript.org/img/logo.svg" alt="https://www.purescript.org/img/logo.svg"></p>
+<h1 id="recap">recap</h1>
+<p><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/">In the previous post</a>, we set up a basic HTTPure server</p>
+<p>Now we are going to add a client side for this app using spork</p>
+<h1 id="purescript-web-app-for-dummies-series">PureScript web app for dummies series</h1>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02 Mar 2022</td>
+<td>set up a basic HTTPure server</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/</a></td>
+</tr>
+<tr>
+<td>07 Mar 2022</td>
+<td>add a client side app</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/</a></td>
+</tr>
+<tr>
+<td>31 Mar 2022</td>
+<td>add a database, API, and unit tests</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/</a></td>
+</tr>
+<tr>
+<td>11 Apr 2022</td>
+<td>connect frontend client to the api</td>
+<td><a href="https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/">https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="preparing">preparing</h1>
+<p>Move the previous purs files to new folder called Server (inside src)
+Create a new folder called Client, and paste <a href="https://github.com/natefaubion/purescript-spork/blob/master/examples/counter/src/Main.purs">this file</a> from spork&rsquo;s examples:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">module</span> Client.Main <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Prelude
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Effect (<span style="color:#66d9ef">Effect</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Spork.Html (<span style="color:#66d9ef">Html</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Spork.Html <span style="color:#66d9ef">as</span> H
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Spork.PureApp (<span style="color:#66d9ef">PureApp</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Spork.PureApp <span style="color:#66d9ef">as</span> PureApp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Model</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">Action</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Inc</span> <span style="color:#f92672">|</span> <span style="color:#66d9ef">Dec</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">update</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">Model</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#66d9ef">Action</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#66d9ef">Model</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">update</span> i <span style="color:#f92672">=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Inc</span> <span style="color:#960050;background-color:#1e0010">→</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Dec</span> <span style="color:#960050;background-color:#1e0010">→</span> i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">render</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">Model</span> <span style="color:#960050;background-color:#1e0010">→</span> <span style="color:#66d9ef">Html</span> <span style="color:#66d9ef">Action</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">render</span> i <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>div <span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span>    [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>button
+</span></span><span style="display:flex;"><span>        [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onClick (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always_ <span style="color:#66d9ef">Inc</span>) ]
+</span></span><span style="display:flex;"><span>        [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text <span style="color:#e6db74">&#34;+&#34;</span> ]
+</span></span><span style="display:flex;"><span>    , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>button
+</span></span><span style="display:flex;"><span>        [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onClick (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always_ <span style="color:#66d9ef">Dec</span>) ]
+</span></span><span style="display:flex;"><span>        [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text <span style="color:#e6db74">&#34;-&#34;</span> ]
+</span></span><span style="display:flex;"><span>    , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>span <span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span>        [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text (show i)
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">PureApp</span> <span style="color:#66d9ef">Model</span> <span style="color:#66d9ef">Action</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> { update, render, init<span style="color:#66d9ef">:</span> <span style="color:#ae81ff">0</span> }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">Effect</span> <span style="color:#66d9ef">Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> void <span style="color:#f92672">$</span> <span style="color:#66d9ef">PureApp</span><span style="color:#f92672">.</span>makeWithSelector app <span style="color:#e6db74">&#34;#app&#34;</span>
+</span></span></code></pre></div><h1 id="basics-of-spork-elm-architecture">basics of spork (elm architecture)</h1>
+<p>Lets now look at this code and we can understand the elm architecture</p>
+<ul>
+<li><strong>main</strong>: this is just to call the app, and assign it to the div with the ID &ldquo;app&rdquo;</li>
+<li><strong>app</strong>: this defines our app, and it uses 3 parameters:
+<ul>
+<li><strong>model</strong>: all data of the app should be inside this model</li>
+<li><strong>render</strong>: the function that generates the html based on the model</li>
+<li><strong>update</strong>: the function handles any event in the app
+<ul>
+<li>the data Action is like an enum for the possible events in the app</li>
+<li>the type Model represents the data in the app, usually a record, but in this case just an Int</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>and there you have it
+it is this simple
+If you would like to see more on a similar topic, <a href="https://tiago.dalligna.com/2021/08/bolero/">check out this post I wrote about bolero</a>, that is also an elmish architecture, but in F#</p>
+<p>Many times a new library will be required, I will not write here every time
+The error message from spago will show you exactly the install command you have to run like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>spago install <span style="color:#f92672">[</span>the_lib_name<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h2 id="build">build</h2>
+<p>Now since we have 2 projects, our build script is a little more complex.</p>
+<p>Purs compiler generates javascript modules of the CommonJS type,
+thus a bundler is required to run it in the browser.</p>
+<p>Our bundler of choice is esbuild.
+Here is how you can set up the build for the project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;build&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;spago build &amp;&amp; npx esbuild build/client.js --bundle --minify --outfile=src/wwwroot/index.js&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;server&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;npm run build &amp;&amp; spago run -m Server.Main&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span></code></pre></div><p>then create a folder called build and add this files:</p>
+<p>client:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;../output/Client.Main/index.js&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">main</span>();
+</span></span></code></pre></div><p>server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;../output/Server.Main/index.js&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span>.<span style="color:#a6e22e">main</span>();
+</span></span></code></pre></div><p>and lastely run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm run server
+</span></span></code></pre></div><p>now you have a server and a client
+hurray!</p>
+<p><a href="https://github.com/pnorco/pnotes/tree/a98abee76f9028a7231c6c81df675f1287033d43">this is the github commit</a> with current version of the code</p>
+<h1 id="adding-some-functionality-to-the-client">adding some functionality to the client</h1>
+<p>we can start by updating our model to have a list of notes</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Model</span> <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>  { currentNote <span style="color:#f92672">::</span> <span style="color:#66d9ef">Maybe</span> <span style="color:#66d9ef">Note</span>
+</span></span><span style="display:flex;"><span>  , notes <span style="color:#f92672">::</span> <span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">Note</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">Note</span> <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>    { title <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    , content <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    , createdAt <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>now remember, our GUI is just reflecting our model
+so that means if we want to have a form to add/edit notes, that should be in the model too.</p>
+<p>But we can&rsquo;t just have a note value, otherwise something would be being edited all the time.
+Instead we are going to add a Maybe Note
+and this way, we only show the form, when there is a value.</p>
+<p>We only show the form to add/edit a note when currentNote is not Nothing</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">renderNote</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Note</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Html</span> <span style="color:#66d9ef">Action</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">renderNote</span> note <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>li [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;note&#34;</span>]] 
+</span></span><span style="display:flex;"><span>    [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>i [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;mdi&#34;</span>, <span style="color:#e6db74">&#34;mdi-delete&#34;</span>, <span style="color:#e6db74">&#34;small&#34;</span>, <span style="color:#e6db74">&#34;delete&#34;</span>], <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onClick (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always_ <span style="color:#f92672">$</span> <span style="color:#66d9ef">Delete</span> note)] <span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span>    , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>div [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;createdAt&#34;</span>]] [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text note<span style="color:#f92672">.</span>createdAt]
+</span></span><span style="display:flex;"><span>    , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>div [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;title&#34;</span>]] [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text note<span style="color:#f92672">.</span>title]
+</span></span><span style="display:flex;"><span>    , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>div [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;content&#34;</span>]] [<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text note<span style="color:#f92672">.</span>content]
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- and this is how we can show the form or a button to add when there is nothing being edited</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">case</span> model<span style="color:#f92672">.</span>currentNote <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">Nothing</span> <span style="color:#f92672">-&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>button [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onClick (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always_ <span style="color:#66d9ef">Add</span>) ] [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text <span style="color:#e6db74">&#34;+&#34;</span> ]
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">Just</span> note <span style="color:#f92672">-&gt;</span> 
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>div [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;note&#34;</span>] ] 
+</span></span><span style="display:flex;"><span>        [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>input [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>type_ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span><span style="color:#66d9ef">InputText</span>, <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;content&#34;</span>], <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onValueInput (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always <span style="color:#66d9ef">UpdateNoteTitle</span>) ]
+</span></span><span style="display:flex;"><span>        , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>input [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>type_ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span><span style="color:#66d9ef">InputText</span>, <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;date&#34;</span>], <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onValueInput (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always <span style="color:#66d9ef">UpdateNoteDate</span>) ]
+</span></span><span style="display:flex;"><span>        , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>textarea [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>classes [<span style="color:#e6db74">&#34;content&#34;</span>], <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onValueInput (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always <span style="color:#66d9ef">UpdateNoteContent</span>)]
+</span></span><span style="display:flex;"><span>        , <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>button
+</span></span><span style="display:flex;"><span>          [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>onClick (<span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>always_ <span style="color:#66d9ef">Save</span>) ]
+</span></span><span style="display:flex;"><span>          [ <span style="color:#66d9ef">H</span><span style="color:#f92672">.</span>text <span style="color:#e6db74">&#34;save&#34;</span> ]
+</span></span><span style="display:flex;"><span>        ]
+</span></span></code></pre></div><p>Once the model and the view are done, all you need is the update method to handle the events fired by the user interacting with the GUI:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">Action</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">Initialize</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Add</span> <span style="color:#75715e">-- will create a new note as current</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Save</span> <span style="color:#75715e">-- will add currentNote to the list of notes</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Delete</span> <span style="color:#66d9ef">Note</span> <span style="color:#75715e">-- remove note from list</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">UpdateNoteTitle</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">UpdateNoteContent</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">UpdateNoteDate</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">update</span> method<span style="color:#66d9ef">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">UpdateNoteTitle</span> str <span style="color:#f92672">-&gt;</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> note <span style="color:#f92672">=</span> fromMaybe {title<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, content<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, createdAt<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;0&#34;</span>} model<span style="color:#f92672">.</span>currentNote
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> model { currentNote <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> note{ title<span style="color:#f92672">=</span>str } }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">UpdateNoteContent</span> str <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> note <span style="color:#f92672">=</span> fromMaybe {title<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, content<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, createdAt<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;0&#34;</span>} model<span style="color:#f92672">.</span>currentNote
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> model { currentNote <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> note{ content<span style="color:#f92672">=</span>str } }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">UpdateNoteDate</span> str <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> note <span style="color:#f92672">=</span> fromMaybe {title<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, content<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, createdAt<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;&#34;</span>} model<span style="color:#f92672">.</span>currentNote
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> model { currentNote <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> note{ createdAt<span style="color:#f92672">=</span>str } }
+</span></span></code></pre></div><p>This is all great, and it works
+<strong>BUT</strong> we still dont have the creation date
+and this is a much bigger deal than it sounds</p>
+<p>You see, in purescript functions are pure by default.
+If you want to introduce <strong>any</strong> side effect, you have to change <strong>the whole call stack</strong> to the Aff or Effect monad.</p>
+<blockquote>
+<p>Why is this a good thing? you may ask
+Because pure functions, for a given input will <strong>always</strong> return the same outputs
+That means your unit tests are simpler and more reliable.
+There is also a little bonus: based on your code, in some cases, pure function can be replaced by values at compiled time (that is called referencial transparency).</p>
+</blockquote>
+<p>In our case, the creation date will be the primary key of our note.
+Yeah, I know, this is not good
+<strong>BUT</strong> this is just a simple app for educational purposes
+dont judge me!</p>
+<p>Anyway, we are now using a feature that returns an Effect
+therefore the update method must be an Effect
+therefore the app should be an Effect
+therefore main should be an Effect as well</p>
+<p>so you see, that is why it changes everything
+the good news is that once this is done, you can now introduce as many effects as you want</p>
+<p>Well, there is one more thing:
+In order to keep the update function pure, this events should be handled in a separate update code. Like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">Action</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">Initialize</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Add</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Added</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Focused</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Edit</span> <span style="color:#66d9ef">Note</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">update</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">Model</span> <span style="color:#f92672">-&gt;</span> (<span style="color:#66d9ef">Action</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Transition</span> <span style="color:#66d9ef">ActionAff</span> <span style="color:#66d9ef">Model</span> <span style="color:#66d9ef">Action</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">update</span> model <span style="color:#f92672">=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Add</span> <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    { model<span style="color:#66d9ef">:</span> model, effects<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span>lift (<span style="color:#66d9ef">AddAff</span> <span style="color:#66d9ef">Added</span>) }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Added</span> date <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> current <span style="color:#f92672">=</span> fromMaybe {title<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, content<span style="color:#66d9ef">:</span><span style="color:#e6db74">&#34;&#34;</span>, createdAt<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;0&#34;</span>} model<span style="color:#f92672">.</span>currentNote
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">in</span> { model<span style="color:#66d9ef">:</span> model {currentNote <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> current {createdAt<span style="color:#f92672">=</span>date}}, effects<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span>lift ((<span style="color:#66d9ef">Focus</span> <span style="color:#e6db74">&#34;newNoteTitle&#34;</span>) <span style="color:#66d9ef">Focused</span>) }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Focused</span> <span style="color:#66d9ef">_</span> <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    purely model
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Edit</span> note <span style="color:#f92672">-&gt;</span>
+</span></span><span style="display:flex;"><span>    { model<span style="color:#66d9ef">:</span> model {currentNote <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> note}, effects<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span>lift ((<span style="color:#66d9ef">Focus</span> <span style="color:#e6db74">&#34;newNoteTitle&#34;</span>) 
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">ActionAff</span> next
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">AddAff</span> (<span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> next)
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Focus</span> <span style="color:#66d9ef">String</span> (<span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> next)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">updateAff</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">ActionAff</span> <span style="color:#f92672">~&gt;</span> <span style="color:#66d9ef">Aff</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">updateAff</span> aff <span style="color:#f92672">=</span> <span style="color:#66d9ef">case</span> aff <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">AddAff</span> next <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    createdAt <span style="color:#f92672">&lt;-</span> liftEffect nowDateTime
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> createdStr <span style="color:#f92672">=</span> displayDatetime createdAt
+</span></span><span style="display:flex;"><span>    pure <span style="color:#f92672">$</span> next createdStr
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Focus</span> id next <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">_</span> <span style="color:#f92672">&lt;-</span> liftEffect <span style="color:#f92672">$</span> <span style="color:#66d9ef">FFI</span><span style="color:#f92672">.</span>focus id
+</span></span><span style="display:flex;"><span>    pure <span style="color:#f92672">$</span> next id
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">displayDatetime</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">DateTime</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">String</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">displayDatetime</span> d <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>    fromRight <span style="color:#e6db74">&#34;no date&#34;</span> (formatDateTime <span style="color:#e6db74">&#34;YYYY-MM-DD HH:mm:ss&#34;</span> d)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span><span style="color:#66d9ef">App</span> <span style="color:#66d9ef">ActionAff</span> (<span style="color:#66d9ef">Const</span> <span style="color:#66d9ef">Void</span>) <span style="color:#66d9ef">Model</span> <span style="color:#66d9ef">Action</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> { update, render, subs<span style="color:#66d9ef">:</span> const mempty, init<span style="color:#66d9ef">:</span> purely initModel }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">Effect</span> <span style="color:#66d9ef">Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> interpreter <span style="color:#f92672">=</span> throughAff updateAff handleErrors
+</span></span><span style="display:flex;"><span>  inst <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span>makeWithSelector (interpreter `merge` never) app <span style="color:#e6db74">&#34;#app&#34;</span>
+</span></span><span style="display:flex;"><span>  inst<span style="color:#f92672">.</span>run
+</span></span></code></pre></div><p>Lets see what happened here:</p>
+<p>to allow effects, we changed our main function, and now we use an App.App</p>
+<p>we modified our update method to update ∷ Model -&gt; (Action -&gt; Transition ActionAff Model Action)</p>
+<p>that means we now have to return &ldquo;purely model&rdquo;, or a record that has {model: x, effects: y }
+where the effects are a tuple containing the <strong>ActionAff</strong> to be ran, and the callback <strong>Action</strong>.</p>
+<p>This <strong>ActionAff</strong>s are handled in a special update method, called <strong>updateAff</strong>.
+In this function, every ActionAff has a next parameter
+this next is the callback
+also, every return has a pure in front
+this pure is the purescript way to say:</p>
+<ul>
+<li>Now you take the response type monad of this funciona, and apply it to the result</li>
+</ul>
+<p>but more on this in a future post.</p>
+<h1 id="conclusion">conclusion</h1>
+<p>At this point you have a basic server and a client.
+The client is being compiled into a js file, dropped inside the wwwroot folder, and loaded into a div with id app inside the index page.</p>
+<p>The code is available in <a href="https://github.com/pnorco/pnotes/releases/tag/v4">the tag v4 of our pnotes repo</a>.</p>
+<p>So far, so good.</p>
+<p>But shouldn&rsquo;t we save this notes somewhere?</p>
+<p>Yes we should.
+But that is part of the next part of our serie.</p>
+<h1 id="side-note">side note</h1>
+<p>But what do you think, was this complicated?
+I know it seems like a lot at first,
+but it gets easier overtime</p>
+<p>Unfortunately the error messages from purs are not very helpful,
+and are extremely confusing for beginers</p>
+<blockquote>
+<p>This makes it even more important to have a helpful comunity.
+I was lucky enough to have a close friend helping me with every step
+still a beginer, I often still need some support</p>
+</blockquote>
+<blockquote>
+<p>And this is why I started this serie of posts
+I feel there is a lot of articles exlaining what is a monad
+but not enough explaining how to build something like a webapp</p>
+</blockquote>
+<p>I hope this is being helpful and see you in the next post</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

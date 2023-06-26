@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspnet_mvc &middot; Tiago on tech</title>
+
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Aspnet_mvc &middot; Tiago on tech">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Aspnet_mvc &middot; Tiago on tech">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">23 Mar 2012, 17:37</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2012/03/aspnet_mvc/" class="post-title">Aspnet_mvc</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-aspnet" href='https://tiago.dalligna.com/tags/aspnet'>aspnet</a>
+                                
+                                    <a class="post-category post-category-dotnet" href='https://tiago.dalligna.com/tags/dotnet'>dotnet</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>So seems like asp.net mvc is finally popular?
+That&rsquo;s perfect, I mean, this is how it should have been since the beginning.</p>
+<p>Let&rsquo;s start with what is mvc:
+Mvc is to build the application as model, view and controller.
+What does that means?
+It means that the view should be only responsible for showing the interface, the data access should be in the model layer, and everything else should be done by the controller.</p>
+<p>Sounds nice, right? Old but gold&hellip; But the thing is&hellip; and how about the web?
+Usually we had a asp / aspx / php / jsp / etc file. This file is requested, and then, from this point on you can call your controller logic.
+But this isn&rsquo;t the proper way to do it. This way your view is mixed with the controller.</p>
+<p>And then, there was the light! true MVC to the web applications.
+Is this hard to implement? off course not, my little grasshopper&hellip;.
+You just have to think your application in a different way. and what is that way?
+Routes!</p>
+<p>And your routes file should look like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> RegisterRoutes(RouteCollection routes)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        routes.IgnoreRoute(<span style="color:#e6db74">&#34;{resource}.axd/{*pathInfo}&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        routes.MapRoute(
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;Default&#34;</span>,                                              <span style="color:#75715e">// Route name</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;{controller}/{action}/{id}&#34;</span>,                           <span style="color:#75715e">// URL with parameters</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">new</span> { controller = <span style="color:#e6db74">&#34;Home&#34;</span>, action = <span style="color:#e6db74">&#34;Index&#34;</span>, id = <span style="color:#e6db74">&#34;&#34;</span> }  <span style="color:#75715e">// Parameter defaults</span>
+</span></span><span style="display:flex;"><span>        );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div>
+<p>And how do you use it?
+Easy: you set it as your controller name, and action, so every time the user types that address the method defined as action is called.
+so when the user types website/home/index, the method index inside the controller home is called.</p>
+<p>Ok, we&rsquo;ve got the code, but how to display it to the user?
+In the controller method, there should be a return View(). You can return View(&ldquo;name-of-the-view&rdquo;)</p>
+<p>Now you have the request processed in the right place, and you have your view. Sweet! :D
+Buuuuuuuuut, something is still missing&hellip; and that&rsquo;s because you have to connect those 2.
+And this is called the mighty ViewBag!</p>
+<p>View bag - speaking like mr jobs would say - is a magical, fantastic&hellip; the better ever created object to carry values between controller and view.
+So how do you use this thing?
+Easy:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>ViewBag.YourVariable = <span style="color:#e6db74">&#34;The title&#34;</span>;</span></span></code></pre></div></p>
+<p>and in the view you can use it like this:</p>
+<!-- raw HTML omitted -->
+<p>By the way, this brings up another topic:RAZOR</p>
+<p>Once again: this is magical, fantastic, amazingly simple. you can put C# code in the view just by adding a @ in front of it.
+And, if you want to put a chunk of code, just use
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">//several lines of code</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></p>
+<p>and how about the model?
+Well&hellip; the model is the same as before, I won&rsquo;t talk about it here.
+But that&rsquo;s it for now.
+I&rsquo;ll write more about razor.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

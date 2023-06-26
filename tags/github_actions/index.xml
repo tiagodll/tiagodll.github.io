@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>github_actions on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/github_actions/</link>
+    <description>Recent content in github_actions on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sun, 28 Nov 2021 18:24:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/github_actions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replace your docker with 3 easy steps</title>
+      <link>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</link>
+      <pubDate>Sun, 28 Nov 2021 18:24:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</guid>
+      <description>I don&amp;rsquo;t like managing servers. This is a well-known fact. My way around it was to set up all my apps using docker, and that made me happy.
+After my small server ran out of space with only 5 web apps running, I started changing my mind. On top of this, I used GitHub actions with azure, and loved it.
+For that reason I moved my dotnet webapp from docker to a Linux service automatically deployed by github actions.</description>
+    </item>
+    
+  </channel>
+</rss>

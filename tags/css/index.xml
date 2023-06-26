@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/css/</link>
+    <description>Recent content in css on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Thu, 15 Aug 2013 22:21:43 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css expandabox</title>
+      <link>https://tiago.dalligna.com/2013/08/css-expandabox/</link>
+      <pubDate>Thu, 15 Aug 2013 22:21:43 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/08/css-expandabox/</guid>
+      <description>Those of you following my posts for a while might know that I like javascript. I like javascript as much as I like not using javascript when I can use css instead.
+So trying to make an expandable box I realised its behaviour is very similar to a checkbox. you have the small excerpt and when you click it you get the full text.
+That being said, it is possible not only to change the label properties according to its state, but to set its state by clicking the label.</description>
+    </item>
+    
+  </channel>
+</rss>

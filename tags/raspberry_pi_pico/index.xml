@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>raspberry_pi_pico on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/raspberry_pi_pico/</link>
+    <description>Recent content in raspberry_pi_pico on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Wed, 27 Oct 2021 14:00:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/raspberry_pi_pico/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>feet keyboard emulator</title>
+      <link>https://tiago.dalligna.com/2021/10/feet-keyboard-emulator/</link>
+      <pubDate>Wed, 27 Oct 2021 14:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/10/feet-keyboard-emulator/</guid>
+      <description>This is in old idea.
+I first thought of it when I tried to use VI.
+My finger was hurting from pressing Ctrl so often.
+And I thought: - If we use our feet to make driving more efficient, why not the pc?
+Well, here is your chance
+Requirements 1 Raspberry PI pico (4 usd) 1 USB cable 2 resistors (to be honest I still don&amp;rsquo;t understand why this) 2 cheap pedals.</description>
+    </item>
+    
+  </channel>
+</rss>

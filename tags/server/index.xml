@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/server/</link>
+    <description>Recent content in server on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sun, 28 Nov 2021 18:24:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replace your docker with 3 easy steps</title>
+      <link>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</link>
+      <pubDate>Sun, 28 Nov 2021 18:24:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</guid>
+      <description>I don&amp;rsquo;t like managing servers. This is a well-known fact. My way around it was to set up all my apps using docker, and that made me happy.
+After my small server ran out of space with only 5 web apps running, I started changing my mind. On top of this, I used GitHub actions with azure, and loved it.
+For that reason I moved my dotnet webapp from docker to a Linux service automatically deployed by github actions.</description>
+    </item>
+    
+    <item>
+      <title>server update</title>
+      <link>https://tiago.dalligna.com/2021/09/server-update/</link>
+      <pubDate>Sat, 18 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/server-update/</guid>
+      <description>God dammit ubuntu! I have to start by admitting one thing: I use to hate servers. Every time I even had to open a remote connection, that would ruin my mood. Granted, I am a web developer, my work depends on it. But still…
+All that is just to explain why I haven’t updated my ancient server for a few years
+Ok, time to roll up my… well, I don’t really wear long sleeves… Anyway, I take a deep breath and try to upgrade it.</description>
+    </item>
+    
+    <item>
+      <title>Certbot</title>
+      <link>https://tiago.dalligna.com/2021/09/certbot/</link>
+      <pubDate>Wed, 08 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/certbot/</guid>
+      <description>my certificate is expired and certbot This gives me a message &amp;ldquo;your current client, does not support ACME v2 at all. You will need to migrate to a different one&amp;rdquo;, but there is nothing I can do to update my certbot.
+So I did some googling around, and found nothing that helped me.
+It is worth to note that this was in an old server with ubuntu 17.
+Now there is one thing I can do: remove it and install it again!</description>
+    </item>
+    
+  </channel>
+</rss>

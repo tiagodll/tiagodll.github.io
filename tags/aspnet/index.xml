@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aspnet on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/aspnet/</link>
+    <description>Recent content in aspnet on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Fri, 23 Mar 2012 17:37:27 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/aspnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aspnet_mvc</title>
+      <link>https://tiago.dalligna.com/2012/03/aspnet_mvc/</link>
+      <pubDate>Fri, 23 Mar 2012 17:37:27 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/aspnet_mvc/</guid>
+      <description>So seems like asp.net mvc is finally popular? That&amp;rsquo;s perfect, I mean, this is how it should have been since the beginning.
+Let&amp;rsquo;s start with what is mvc: Mvc is to build the application as model, view and controller. What does that means? It means that the view should be only responsible for showing the interface, the data access should be in the model layer, and everything else should be done by the controller.</description>
+    </item>
+    
+  </channel>
+</rss>

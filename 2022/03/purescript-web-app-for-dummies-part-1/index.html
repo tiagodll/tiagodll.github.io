@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureScript web app for dummies - part 1 &middot; Tiago on tech</title>
+
+    <meta name="description" content="A dead simple guide of how to make a web app using purescript">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="PureScript web app for dummies - part 1 &middot; Tiago on tech">
+    <meta name="twitter:description" content="A dead simple guide of how to make a web app using purescript">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PureScript web app for dummies - part 1 &middot; Tiago on tech">
+    <meta property="og:description" content="A dead simple guide of how to make a web app using purescript">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">02 Mar 2022, 18:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/" class="post-title">PureScript web app for dummies - part 1</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-PureScript" href='https://tiago.dalligna.com/tags/PureScript'>PureScript</a>
+                                
+                                    <a class="post-category post-category-purs" href='https://tiago.dalligna.com/tags/purs'>purs</a>
+                                
+                                    <a class="post-category post-category-spork" href='https://tiago.dalligna.com/tags/spork'>spork</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p><img src="https://www.purescript.org/img/logo.svg" alt="https://www.purescript.org/img/logo.svg"></p>
+<h1 id="purescript-web-app-for-dummies-series">PureScript web app for dummies series</h1>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02 Mar 2022</td>
+<td>set up a basic HTTPure server</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/</a></td>
+</tr>
+<tr>
+<td>07 Mar 2022</td>
+<td>add a client side app</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/</a></td>
+</tr>
+<tr>
+<td>31 Mar 2022</td>
+<td>add a database, API, and unit tests</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/</a></td>
+</tr>
+<tr>
+<td>11 Apr 2022</td>
+<td>connect frontend client to the api</td>
+<td><a href="https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/">https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="setup">setup</h1>
+<p>Hello folks, are you interested in purescript?
+Yes?
+Then I have something you will definitely enjoy: HTTPure + spork = web application
+but just in case you dont have it installed in your machine yet</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install purescript spago --global
+</span></span></code></pre></div><h1 id="init">Init</h1>
+<p>you start with a basic package:</p>
+<ul>
+<li>pacakge.json =&gt; the npm package usual stuff</li>
+<li>packages.dhall =&gt; list of purescript packages (it can contain direct reference to the repository)</li>
+<li>spago.dhall =&gt; purescript dependency file (well, spago, but you understand my point right?)</li>
+<li>src/Main.purs =&gt; entry point for our webserver</li>
+<li>test/Main.purs =&gt; tests file</li>
+</ul>
+<p>you can download this files here: <a href="https://github.com/pnorco/pnotes/tree/256f5671f9cc3618201087b3dbebd8341d6f9730">in our github repo</a>
+but you don&rsquo;t have to.</p>
+<p>Here are the steps to get there:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>spago init
+</span></span><span style="display:flex;"><span>spago run Main
+</span></span></code></pre></div><p>now you have a purescript project
+but it doesnt do anything
+so we modify our main to listen to the port 8080</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">module</span> Server.Main <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Prelude
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Effect.Class.Console (<span style="color:#a6e22e">log</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> HTTPure (<span style="color:#66d9ef">ServerM</span>, <span style="color:#a6e22e">serve</span>, <span style="color:#a6e22e">ok</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">ServerM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> serve <span style="color:#ae81ff">8080</span> router <span style="color:#f92672">$</span> log <span style="color:#e6db74">&#34;Server now up on port 8080&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>    router <span style="color:#66d9ef">_</span> <span style="color:#f92672">=</span> ok <span style="color:#e6db74">&#34;hello world!&#34;</span>
+</span></span></code></pre></div><p>now add   &ldquo;httpure&rdquo; in your list of dependencies:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>spago install httpure
+</span></span><span style="display:flex;"><span>spago run Main
+</span></span></code></pre></div><p>browse http://localhost:8080 and you have a web server
+not a very useful one though&hellip;</p>
+<h1 id="adding-a-router">Adding a Router</h1>
+<p>Lets start improving this a bit by adding a rounter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Effect</span> <span style="color:#66d9ef">Unit</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> launchAff_ <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> options <span style="color:#f92672">=</span> {hostname<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;localhost&#34;</span>, port<span style="color:#66d9ef">:</span> <span style="color:#ae81ff">8080</span>, backlog<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Nothing</span>}
+</span></span><span style="display:flex;"><span>  liftEffect 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">$</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>serve&#39; options router
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">$</span> log (<span style="color:#e6db74">&#34;Server now up @ &#34;</span> <span style="color:#f92672">&lt;&gt;</span> options<span style="color:#f92672">.</span>hostname <span style="color:#f92672">&lt;&gt;</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">&lt;&gt;</span> show options<span style="color:#f92672">.</span>port)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">router</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Request</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">router</span> { body, headers, method, path } <span style="color:#f92672">=</span> <span style="color:#66d9ef">case</span> method, path <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok <span style="color:#f92672">$</span> <span style="color:#e6db74">&#34;hello world&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ <span style="color:#e6db74">&#34;ping&#34;</span> ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok <span style="color:#f92672">$</span> <span style="color:#e6db74">&#34;pong&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">_</span>, <span style="color:#66d9ef">_</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    log <span style="color:#f92672">$</span> <span style="color:#e6db74">&#34;Not found: &#34;</span> <span style="color:#f92672">&lt;&gt;</span> show path
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>unauthorized
+</span></span></code></pre></div><p>now you will need</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>spago install node-fs-aff
+</span></span><span style="display:flex;"><span>spago install arrays
+</span></span><span style="display:flex;"><span>spago install maybe
+</span></span><span style="display:flex;"><span>spago install tuples
+</span></span></code></pre></div><h1 id="rendering-static-assets">Rendering static assets</h1>
+<p>ok, things are starting to get more interesting now
+but still it is not that great
+lets render some assets (images/css/js/etc)</p>
+<p>This means reading the files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">serveFile</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serveFile</span> path <span style="color:#f92672">=</span> (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>exists path) <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  false <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>notFound
+</span></span><span style="display:flex;"><span>  true <span style="color:#f92672">-&gt;</span> (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>readFile path) <span style="color:#f92672">&gt;&gt;=</span> (<span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok)
+</span></span></code></pre></div><p>and sending to the browser</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ <span style="color:#e6db74">&#34;static&#34;</span>, filename ] <span style="color:#f92672">-&gt;</span> serveFile (<span style="color:#e6db74">&#34;src/wwwroot/&#34;</span> <span style="color:#f92672">&lt;&gt;</span> filename)
+</span></span></code></pre></div><p>now Main is starting to get too big, so lets split router into it&rsquo;s own file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">module</span> Server.Router <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Prelude
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Data.Array (<span style="color:#a6e22e">length</span>, <span style="color:#a6e22e">take</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Data.Tuple.Nested ((<span style="color:#f92672">/\</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Effect.Aff.Class (<span style="color:#a6e22e">liftAff</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Effect.Class.Console (<span style="color:#a6e22e">log</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> Node.FS.Aff (<span style="color:#a6e22e">exists</span>, <span style="color:#a6e22e">readFile</span>) as <span style="color:#66d9ef">FS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> HTTPure <span style="color:#66d9ef">as</span> HTTPure
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">router</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Request</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">router</span> { body, headers, method, path } <span style="color:#f92672">=</span> <span style="color:#66d9ef">case</span> method, path <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ <span style="color:#e6db74">&#34;ping&#34;</span> ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok <span style="color:#f92672">$</span> <span style="color:#e6db74">&#34;pong&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ ] <span style="color:#f92672">-&gt;</span> serveFile&#39; <span style="color:#e6db74">&#34;text/html&#34;</span> <span style="color:#e6db74">&#34;src/wwwroot/index.html&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ <span style="color:#e6db74">&#34;static&#34;</span>, filename ] <span style="color:#f92672">-&gt;</span> serveFile (<span style="color:#e6db74">&#34;src/wwwroot/&#34;</span> <span style="color:#f92672">&lt;&gt;</span> filename)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, <span style="color:#66d9ef">_</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">|</span> startsWith path [ <span style="color:#e6db74">&#34;../&#34;</span> ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>unauthorized
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">_</span>, <span style="color:#66d9ef">_</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    log <span style="color:#f92672">$</span> <span style="color:#e6db74">&#34;Not found: &#34;</span> <span style="color:#f92672">&lt;&gt;</span> show path
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>unauthorized
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">startsWith</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Boolean</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">startsWith</span> s t <span style="color:#f92672">=</span> t <span style="color:#f92672">==</span> (take (length t) s)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serveFile&#39;</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serveFile&#39;</span> contentType path <span style="color:#f92672">=</span> (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>exists path) <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  false <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>notFound
+</span></span><span style="display:flex;"><span>  true <span style="color:#f92672">-&gt;</span> (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>readFile path) <span style="color:#f92672">&gt;&gt;=</span> (<span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok&#39; (<span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>headers [ <span style="color:#e6db74">&#34;Content-Type&#34;</span> <span style="color:#f92672">/\</span> contentType ]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serveFile</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">serveFile</span> path <span style="color:#f92672">=</span> (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>exists path) <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  false <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>notFound
+</span></span><span style="display:flex;"><span>  true <span style="color:#f92672">-&gt;</span> (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>readFile path) <span style="color:#f92672">&gt;&gt;=</span> (<span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok)
+</span></span><span style="display:flex;"><span>  
+</span></span></code></pre></div><p>The code is available in <a href="https://github.com/pnorco/pnotes/releases/tag/v1">the tag v1 of our pnotes repo</a>.</p>
+<h1 id="wrap-up">Wrap up</h1>
+<p>In this post I tried to help you go through the very basics of how to make a purescript web server
+It is the first post of a series that will take this into a functional note taking app, with sqlite database and spork as the client side</p>
+<p>I hope you have enjoyed and till next one</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

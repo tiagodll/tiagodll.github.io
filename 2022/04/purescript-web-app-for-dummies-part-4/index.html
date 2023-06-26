@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureScript web app for dummies - part 4 &middot; Tiago on tech</title>
+
+    <meta name="description" content="A dead simple guide of how to make a web app using purescript">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="PureScript web app for dummies - part 4 &middot; Tiago on tech">
+    <meta name="twitter:description" content="A dead simple guide of how to make a web app using purescript">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PureScript web app for dummies - part 4 &middot; Tiago on tech">
+    <meta property="og:description" content="A dead simple guide of how to make a web app using purescript">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">11 Apr 2022, 17:30</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/" class="post-title">PureScript web app for dummies - part 4</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-PureScript" href='https://tiago.dalligna.com/tags/PureScript'>PureScript</a>
+                                
+                                    <a class="post-category post-category-purs" href='https://tiago.dalligna.com/tags/purs'>purs</a>
+                                
+                                    <a class="post-category post-category-spork" href='https://tiago.dalligna.com/tags/spork'>spork</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p><img src="https://www.purescript.org/img/logo.svg" alt="https://www.purescript.org/img/logo.svg"></p>
+<h1 id="recap">recap</h1>
+<p><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/">In the previous post</a>, we created a little client side app to create, update and delete notes
+It works well, but it is not very useful because nothing is being persisted</p>
+<p>Now we are going to add a database to the server</p>
+<h1 id="index-for-the-purescript-web-app-for-dummies-series">index for the PureScript web app for dummies series</h1>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02 Mar 2022</td>
+<td>set up a basic HTTPure server</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/</a></td>
+</tr>
+<tr>
+<td>07 Mar 2022</td>
+<td>add a client side app</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/</a></td>
+</tr>
+<tr>
+<td>31 Mar 2022</td>
+<td>add a database, API, and unit tests</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/</a></td>
+</tr>
+<tr>
+<td>11 Apr 2022</td>
+<td>connect frontend client to the api</td>
+<td><a href="https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/">https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="helpers">Helpers</h1>
+<p>[The ajax method is a bit verbose, so it make sense to have some helpers (ajax/json)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">request</span> <span style="color:#f92672">::</span> <span style="color:#960050;background-color:#1e0010">∀</span> a b<span style="color:#f92672">.</span> <span style="color:#66d9ef">WriteForeign</span> a <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">Decode</span> b <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">Method</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Method</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Request</span> a <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Aff</span> (<span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Response</span> b)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">request</span> method req <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>  liftAff <span style="color:#f92672">$</span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Affjax</span><span style="color:#f92672">.</span>request 
+</span></span><span style="display:flex;"><span>      (<span style="color:#66d9ef">Affjax</span><span style="color:#f92672">.</span>defaultRequest 
+</span></span><span style="display:flex;"><span>        { method <span style="color:#f92672">=</span> <span style="color:#66d9ef">Left</span> method
+</span></span><span style="display:flex;"><span>        , headers <span style="color:#f92672">=</span> maybe <span style="color:#66d9ef">[]</span> (<span style="color:#a6e22e">\</span>t <span style="color:#f92672">-&gt;</span> [<span style="color:#66d9ef">RequestHeader</span><span style="color:#f92672">.</span><span style="color:#66d9ef">RequestHeader</span> <span style="color:#e6db74">&#34;auth.sig&#34;</span> t]) req<span style="color:#f92672">.</span>token
+</span></span><span style="display:flex;"><span>        , url <span style="color:#f92672">=</span> req<span style="color:#f92672">.</span>url
+</span></span><span style="display:flex;"><span>        , content <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> <span style="color:#f92672">$</span> <span style="color:#66d9ef">RequestBody</span><span style="color:#f92672">.</span>string <span style="color:#f92672">$</span> writeJSON req<span style="color:#f92672">.</span>content
+</span></span><span style="display:flex;"><span>        , responseFormat <span style="color:#f92672">=</span> <span style="color:#66d9ef">ResponseFormat</span><span style="color:#f92672">.</span>string
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      ) <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Left</span> <span style="color:#a6e22e">error</span> <span style="color:#f92672">-&gt;</span> 
+</span></span><span style="display:flex;"><span>      pure <span style="color:#f92672">$</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseError</span> (<span style="color:#66d9ef">ApiTransportError</span> (<span style="color:#66d9ef">Affjax</span><span style="color:#f92672">.</span>printError <span style="color:#a6e22e">error</span>))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">Right</span> response <span style="color:#f92672">-&gt;</span> pure <span style="color:#66d9ef">case</span> response<span style="color:#f92672">.</span>status <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">StatusCode</span> <span style="color:#ae81ff">200</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">case</span> readResponse (<span style="color:#66d9ef">JSON</span> response<span style="color:#f92672">.</span>body) <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Just</span> content <span style="color:#f92672">-&gt;</span> content
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">Nothing</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseError</span> (<span style="color:#66d9ef">ApiError</span> response<span style="color:#f92672">.</span>body)
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">_</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseError</span> (<span style="color:#66d9ef">ApiError</span> <span style="color:#66d9ef">if</span> response<span style="color:#f92672">.</span>body <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#66d9ef">then</span> response<span style="color:#f92672">.</span>statusText <span style="color:#66d9ef">else</span> response<span style="color:#f92672">.</span>body)
+</span></span></code></pre></div><p>This, combined with the json helper, will automate the parsing, so you just focus on sending/receiving your objects and forget about the serialization.</p>
+<h1 id="model">Model</h1>
+<p>To work with our automated serialization, we should have the types that support it</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#75715e">-- The response type is being use by the helper to parse the api results</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">data</span> <span style="color:#66d9ef">Response</span> a
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">=</span> <span style="color:#66d9ef">ResponseError</span> <span style="color:#66d9ef">ApiError</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">|</span> <span style="color:#66d9ef">Response</span> a
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- to make it even more readable, we just create an alias for each api response</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">GetNotesResponse</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Response</span> (<span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">Note</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">derive</span> <span style="color:#66d9ef">instance</span> <span style="color:#66d9ef">Generic</span> (<span style="color:#66d9ef">Response</span> a) <span style="color:#66d9ef">_</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">derive</span> <span style="color:#66d9ef">instance</span> <span style="color:#66d9ef">Functor</span> <span style="color:#66d9ef">Response</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">instance</span> <span style="color:#66d9ef">Encode</span> a <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">Encode</span> (<span style="color:#66d9ef">Response</span> a) <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>  encode s <span style="color:#f92672">=</span> genericEncode defaultOptions s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">instance</span> <span style="color:#66d9ef">Decode</span> a <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">Decode</span> (<span style="color:#66d9ef">Response</span> a) <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>  decode s <span style="color:#f92672">=</span> genericDecode defaultOptions s
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">instance</span> <span style="color:#66d9ef">Decode</span> a <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">ReadForeign</span> (<span style="color:#66d9ef">Response</span> a) <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>  readImpl <span style="color:#f92672">=</span> decode
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">instance</span> <span style="color:#66d9ef">Encode</span> a <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">WriteForeign</span> (<span style="color:#66d9ef">Response</span> a) <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span>  writeImpl <span style="color:#f92672">=</span> encode 
+</span></span></code></pre></div><h1 id="api">Api</h1>
+<p>The changes in the api are minimal
+We are just going to set the Response type for our serialization/deserialization.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">getNotes</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getNotes</span> token <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  notes <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">DB</span><span style="color:#f92672">.</span>getNotes token
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok <span style="color:#f92672">$</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>writeJSON (<span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Response</span> notes)
+</span></span></code></pre></div><h1 id="client">Client</h1>
+<p>Now we want our client to load the notes from our api.</p>
+<p>To be able to do that, 3 changes are required:</p>
+<ul>
+<li>add an actionAff, because loading from API is a side effect</li>
+<li>add an action to handle the return</li>
+<li>call this actionAff in the application load</li>
+</ul>
+<p>With our new helpers, the code is fairly straightforward</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#75715e">-- add to the ActionAff the request action</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">GetNotes</span> <span style="color:#66d9ef">String</span> (<span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">GetNotesResponse</span> <span style="color:#f92672">-&gt;</span> next)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- just call the ajax helper</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GetNotes</span> token next <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    notes <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">Ajax</span><span style="color:#f92672">.</span>get { url<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;/api/notes&#34;</span>, token<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">Just</span> token, content<span style="color:#66d9ef">:</span> { } }
+</span></span><span style="display:flex;"><span>    pure <span style="color:#f92672">$</span> next notes
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- add the return to the the Actions</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">NotesLoaded</span> <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">GetNotesResponse</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- the loaded action will be matched as an error, or a response</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">NotesLoaded</span> reponse <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">case</span> reponse <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseError</span> e <span style="color:#f92672">-&gt;</span> purely model { <span style="color:#a6e22e">error</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> (show e) }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">M</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Response</span> r <span style="color:#f92672">-&gt;</span> purely model { notes <span style="color:#f92672">=</span> r }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- add the new ActionAff event to load the notes in the init</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#960050;background-color:#1e0010">∷</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span><span style="color:#66d9ef">App</span> <span style="color:#66d9ef">ActionAff</span> (<span style="color:#66d9ef">Const</span> <span style="color:#66d9ef">Void</span>) <span style="color:#66d9ef">Model</span> <span style="color:#66d9ef">Action</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> { update, render, subs<span style="color:#66d9ef">:</span> const mempty, init<span style="color:#66d9ef">:</span> {model<span style="color:#66d9ef">:</span> initModel, effects<span style="color:#66d9ef">:</span> <span style="color:#66d9ef">App</span><span style="color:#f92672">.</span>lift ((<span style="color:#66d9ef">GetNotes</span> <span style="color:#e6db74">&#34;token&#34;</span>) <span style="color:#66d9ef">NotesLoaded</span>)} }
+</span></span></code></pre></div><p>Now the next steps are to do the same to save and delete notes.</p>
+<p>The code is available in <a href="https://github.com/pnorco/pnotes/releases/tag/v6">the tag v6 of our pnotes repo</a>.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>This concludes are very basic guide of how to make a webapp using purescript.</p>
+<p>I know, many things are missing, there are no users, the token is just the hardcoded token string, but the point is: all this features are build on top of what we already have here.</p>
+<p>The objective of this guide was to give you the minimum to have a real world website up and running, because starting with a new language can be very frustrating when you are stuck with technical details in the basics.</p>
+<p>Functional programming can be very challenging, not because it is hard, but because object oriented being our current standard, it takes a lot of effort to change the way you approach problem solving.</p>
+<p>But it is worth the effort. Even if you will never switch to a functional language, the mainstream languages (such as java, C#, javascript&hellip;) are adding more and more functional features.</p>
+<h3 id="special-thanks">Special thanks</h3>
+<p>This posts would not be possible without the help from my good friend, and purs mentor <a href="https://github.com/j-nava">Jesse</a>. Take a look on his github.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

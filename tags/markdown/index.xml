@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Markdown on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/markdown/</link>
+    <description>Recent content in Markdown on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Fri, 22 Apr 2022 18:00:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown - the basics</title>
+      <link>https://tiago.dalligna.com/2022/04/markdown-the-basics/</link>
+      <pubDate>Fri, 22 Apr 2022 18:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2022/04/markdown-the-basics/</guid>
+      <description>Background Why I am writing about markdown, isn&amp;rsquo;t this boring?
+No my little padawan, markdown have quickly climbed to be my favorite text editing tool.
+During a few years I worked in a custom blog engine. After that in a social network for traders.
+In both cases, editing the content was crucial for the software, and having tried many, many different WYSIWYG editors, I gave up.
+No matter what we did (yes, specially in the second case, there was a big team involved), the users always found ways to break our editor and generate invalid data.</description>
+    </item>
+    
+  </channel>
+</rss>

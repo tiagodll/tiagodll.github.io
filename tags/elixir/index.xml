@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elixir on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/elixir/</link>
+    <description>Recent content in elixir on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sat, 13 Jul 2013 17:14:57 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir &#43; MongoDB &#43; Dynamo -&gt; because we are all web junkies</title>
+      <link>https://tiago.dalligna.com/2013/07/elixir--mongodb--dynamo-because-we-are-all-web-junkies/</link>
+      <pubDate>Sat, 13 Jul 2013 17:14:57 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/07/elixir--mongodb--dynamo-because-we-are-all-web-junkies/</guid>
+      <description>Now that you know how to have an elixir software accessing mongodb, what is the next logical step? to build a blog engine, obviously
+So lets get started, shall we?</description>
+    </item>
+    
+    <item>
+      <title>So, what is elixir?</title>
+      <link>https://tiago.dalligna.com/2013/06/so-what-is-elixir/</link>
+      <pubDate>Sun, 23 Jun 2013 17:15:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/06/so-what-is-elixir/</guid>
+      <description>A bit of background first: In my masters I had a module called Programming Paradigms and Languages. What this module is about is the different paradigms, and one language for each of them.
+The chosen languages were: Object Oriented: Ruby Functional: Clojure Logical: Prolog Process Oriented: Erlang Mathematical Programming: Matlab
+Out of that what I can say is:
+Ruby syntax is awesome. So elegant but there are many performance issues Clojure is very nice for the academic world, but I cant imagine anyone using it for commercial software building.</description>
+    </item>
+    
+  </channel>
+</rss>

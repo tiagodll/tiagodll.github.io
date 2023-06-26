@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mongodb on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/mongodb/</link>
+    <description>Recent content in mongodb on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sat, 13 Jul 2013 17:14:57 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elixir &#43; MongoDB &#43; Dynamo -&gt; because we are all web junkies</title>
+      <link>https://tiago.dalligna.com/2013/07/elixir--mongodb--dynamo-because-we-are-all-web-junkies/</link>
+      <pubDate>Sat, 13 Jul 2013 17:14:57 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/07/elixir--mongodb--dynamo-because-we-are-all-web-junkies/</guid>
+      <description>Now that you know how to have an elixir software accessing mongodb, what is the next logical step? to build a blog engine, obviously
+So lets get started, shall we?</description>
+    </item>
+    
+  </channel>
+</rss>

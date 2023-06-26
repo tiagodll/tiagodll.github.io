@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/posts/</link>
+    <description>Recent content in Posts on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Fri, 22 Apr 2022 18:00:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown - the basics</title>
+      <link>https://tiago.dalligna.com/2022/04/markdown-the-basics/</link>
+      <pubDate>Fri, 22 Apr 2022 18:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2022/04/markdown-the-basics/</guid>
+      <description>Background Why I am writing about markdown, isn&amp;rsquo;t this boring?
+No my little padawan, markdown have quickly climbed to be my favorite text editing tool.
+During a few years I worked in a custom blog engine. After that in a social network for traders.
+In both cases, editing the content was crucial for the software, and having tried many, many different WYSIWYG editors, I gave up.
+No matter what we did (yes, specially in the second case, there was a big team involved), the users always found ways to break our editor and generate invalid data.</description>
+    </item>
+    
+    <item>
+      <title>PureScript web app for dummies - part 4</title>
+      <link>https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/</link>
+      <pubDate>Mon, 11 Apr 2022 17:30:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/</guid>
+      <description>recap In the previous post, we created a little client side app to create, update and delete notes It works well, but it is not very useful because nothing is being persisted
+Now we are going to add a database to the server
+index for the PureScript web app for dummies series Date Description Link 02 Mar 2022 set up a basic HTTPure server https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/ 07 Mar 2022 add a client side app https://tiago.</description>
+    </item>
+    
+    <item>
+      <title>PureScript web app for dummies - part 3</title>
+      <link>https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/</link>
+      <pubDate>Thu, 31 Mar 2022 20:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/</guid>
+      <description>recap In the previous post, we created a little client side app to create, update and delete notes
+It works well, but it is not very useful because nothing is being persisted
+Now we are going to add a database to the server
+PureScript web app for dummies series Date Description Link 02 Mar 2022 set up a basic HTTPure server https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/ 07 Mar 2022 add a client side app https://tiago.</description>
+    </item>
+    
+    <item>
+      <title>PureScript web app for dummies - part 2</title>
+      <link>https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/</link>
+      <pubDate>Mon, 07 Mar 2022 23:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/</guid>
+      <description>recap In the previous post, we set up a basic HTTPure server
+Now we are going to add a client side for this app using spork
+PureScript web app for dummies series Date Description Link 02 Mar 2022 set up a basic HTTPure server https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/ 07 Mar 2022 add a client side app https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/ 31 Mar 2022 add a database, API, and unit tests https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/ 11 Apr 2022 connect frontend client to the api https://tiago.</description>
+    </item>
+    
+    <item>
+      <title>PureScript web app for dummies - part 1</title>
+      <link>https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/</link>
+      <pubDate>Wed, 02 Mar 2022 18:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/</guid>
+      <description>PureScript web app for dummies series Date Description Link 02 Mar 2022 set up a basic HTTPure server https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/ 07 Mar 2022 add a client side app https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/ 31 Mar 2022 add a database, API, and unit tests https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/ 11 Apr 2022 connect frontend client to the api https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/ setup Hello folks, are you interested in purescript? Yes? Then I have something you will definitely enjoy: HTTPure + spork = web application but just in case you dont have it installed in your machine yet</description>
+    </item>
+    
+    <item>
+      <title>Replace your docker with 3 easy steps</title>
+      <link>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</link>
+      <pubDate>Sun, 28 Nov 2021 18:24:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</guid>
+      <description>I don&amp;rsquo;t like managing servers. This is a well-known fact. My way around it was to set up all my apps using docker, and that made me happy.
+After my small server ran out of space with only 5 web apps running, I started changing my mind. On top of this, I used GitHub actions with azure, and loved it.
+For that reason I moved my dotnet webapp from docker to a Linux service automatically deployed by github actions.</description>
+    </item>
+    
+    <item>
+      <title>feet keyboard emulator</title>
+      <link>https://tiago.dalligna.com/2021/10/feet-keyboard-emulator/</link>
+      <pubDate>Wed, 27 Oct 2021 14:00:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/10/feet-keyboard-emulator/</guid>
+      <description>This is in old idea.
+I first thought of it when I tried to use VI.
+My finger was hurting from pressing Ctrl so often.
+And I thought: - If we use our feet to make driving more efficient, why not the pc?
+Well, here is your chance
+Requirements 1 Raspberry PI pico (4 usd) 1 USB cable 2 resistors (to be honest I still don&amp;rsquo;t understand why this) 2 cheap pedals.</description>
+    </item>
+    
+    <item>
+      <title>server update</title>
+      <link>https://tiago.dalligna.com/2021/09/server-update/</link>
+      <pubDate>Sat, 18 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/server-update/</guid>
+      <description>God dammit ubuntu! I have to start by admitting one thing: I use to hate servers. Every time I even had to open a remote connection, that would ruin my mood. Granted, I am a web developer, my work depends on it. But still…
+All that is just to explain why I haven’t updated my ancient server for a few years
+Ok, time to roll up my… well, I don’t really wear long sleeves… Anyway, I take a deep breath and try to upgrade it.</description>
+    </item>
+    
+    <item>
+      <title>Certbot</title>
+      <link>https://tiago.dalligna.com/2021/09/certbot/</link>
+      <pubDate>Wed, 08 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/certbot/</guid>
+      <description>my certificate is expired and certbot This gives me a message &amp;ldquo;your current client, does not support ACME v2 at all. You will need to migrate to a different one&amp;rdquo;, but there is nothing I can do to update my certbot.
+So I did some googling around, and found nothing that helped me.
+It is worth to note that this was in an old server with ubuntu 17.
+Now there is one thing I can do: remove it and install it again!</description>
+    </item>
+    
+    <item>
+      <title>Bolero</title>
+      <link>https://tiago.dalligna.com/2021/08/bolero/</link>
+      <pubDate>Mon, 09 Aug 2021 15:42:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/08/bolero/</guid>
+      <description>What do you think about blazor?
+What about Elm?
+What if Elm architecture was running in blazor, but in F#?
+Well, that is what bolero is about.
+Getting started Install dotnet if you haven&amp;rsquo;t already go to https://fsbolero.io/ and follow the 3 easy steps to have your app up and running Continue following this guide. Understanding the Elm architecture Bolero is based on the elm architecture.
+this is divided in 3 items:</description>
+    </item>
+    
+    <item>
+      <title>Hugo blog engine</title>
+      <link>https://tiago.dalligna.com/2021/06/hugo-blog-engine/</link>
+      <pubDate>Sat, 12 Jun 2021 17:50:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/06/hugo-blog-engine/</guid>
+      <description>After almost 10 years of blogging in blogger (with a very low frequency), I decided to self host my blog. So then I had to decide what to go with
+Requirements: Markdown - I have been a web developer for more than 20 years. Because of that, my growing hatred towards WYSYWYG editors peaked while I was working in a custom CMS. In 2013 my company started using redmine (a markdown)</description>
+    </item>
+    
+    <item>
+      <title>i18n - vanilla javascript</title>
+      <link>https://tiago.dalligna.com/2018/03/i18n-vanilla-javascript/</link>
+      <pubDate>Thu, 08 Mar 2018 16:38:47 +0000</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2018/03/i18n-vanilla-javascript/</guid>
+      <description>I am getting tired of all this javascript frameworks.
+Some years ago it was almost impossible to maintain a webapp compatible to all relevant browsers without some framework like jquery.
+Now browsers have evolved enough to make it optional. And given the choice, I prefer the lightweight simpler approach of using vanilla js.
+It is amazing how some simple features are usually done with plugins. One of them is translation. Ok, if you need more extensive support, it might be a good idea to use something but for the basics there is no need for anything more than a json file and one command</description>
+    </item>
+    
+    <item>
+      <title>Tinkerboard</title>
+      <link>https://tiago.dalligna.com/2017/05/tinkerboard/</link>
+      <pubDate>Sat, 20 May 2017 07:30:29 +0000</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2017/05/tinkerboard/</guid>
+      <description>Finally my Asus tinkerboard arrived.
+Is it awesome? not sure yet&amp;hellip;
+Yes, it packs more power than raspberry pi, but it falls behind in so many things
+The software is basically inexistent You get a standar linux and nothing more With no further ado, lets get it going.
+step 1: ssh to it ssh linaro@your_ip
+pwd: linaro step 2: install go
+wget https://storage.googleapis.com/golang/go1.8.1.linux-armv6l.tar.gz tar -C /usr/local -xzf go1.8.1.linux-armv6l.tar.gz export PATH=$PATH:/usr/local/go/bin &amp;hellip; aaaaaaannnd I am out of space :&#39;(</description>
+    </item>
+    
+    <item>
+      <title>did I run my migrations?</title>
+      <link>https://tiago.dalligna.com/2015/04/did-i-run-my-migrations/</link>
+      <pubDate>Wed, 22 Apr 2015 16:19:28 +0000</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2015/04/did-i-run-my-migrations/</guid>
+      <description>Today I had an error message driving me crazy:
+`method_missing&amp;#39;: undefined method `export_format&amp;#39; for XXX model You see, our model is a gem itself, because it is shared by several projects. When we have something in the schema that is not in the database, that is the error we get.
+Now, I knew this error from previous executions, but my model was in synch with the DB.
+I tried to comment out all my changes, without luck.</description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://tiago.dalligna.com/2014/10/go/</link>
+      <pubDate>Thu, 02 Oct 2014 11:16:11 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/10/go/</guid>
+      <description>C is fast, but boring, Ruby is slow, but fun. Go is right in between
+Let&amp;rsquo;s start with the fun bits:
+You don&amp;rsquo;t import just a file, you import a repository. Reading import &amp;ldquo;github.com/tiagodll/golib&amp;rdquo; is beautiful, that alone gets me excited about go.
+Returning multiple values. Yes, finally! You can set resp, err := MyFunction()
+Ditching the ;. I never got the reason for it, maybe it is because I learned programming with VB, but to me it just doesn&amp;rsquo;t make sense.</description>
+    </item>
+    
+    <item>
+      <title>Dart &#43; start &#43; polymer = ?</title>
+      <link>https://tiago.dalligna.com/2014/08/dart--start--polymer/</link>
+      <pubDate>Sun, 10 Aug 2014 17:06:06 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/08/dart--start--polymer/</guid>
+      <description>So as I said in my Dart, what do we think about it? post, it is an interesting language to look into. It is lacking good libraries, but a problem can also be seen as an opportunity: it is a great time build your own.
+Back to the topic, because of the pub system it is very easy to have dart + start or dart + polymer, but not as easy to have both.</description>
+    </item>
+    
+    <item>
+      <title>Dart, what do we think about it?</title>
+      <link>https://tiago.dalligna.com/2014/07/dart-what-do-we-think-about-it/</link>
+      <pubDate>Thu, 24 Jul 2014 17:04:43 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/07/dart-what-do-we-think-about-it/</guid>
+      <description>yeah, about that&amp;hellip;
+Google&amp;rsquo;s attempt to improve on Javascript and get a server-side language at the same time. I have always wanted something else to thrive over javascript, and tried many good options like coffeescript or opal. Most of them are really good and easy to use as long as everything is correct. Sadly that is not what happens. The bug fixing is a vital phase of software development, and in this is the problem with all the languages that compile to javascript.</description>
+    </item>
+    
+    <item>
+      <title>Dart</title>
+      <link>https://tiago.dalligna.com/2014/07/dart/</link>
+      <pubDate>Thu, 24 Jul 2014 11:19:27 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/07/dart/</guid>
+      <description>yeah, about that&amp;hellip;
+Google&amp;rsquo;s attempt to improve on Javascript and get a server-side language at the same time. I have always wanted something else to thrive over javascript, and tried many good options like coffeescript or opal. Most of them are really good and easy to use as long as everything is correct. Sadly that is not what happens. The bug fixing is a vital phase of software development, and in this is the problem with all the languages that compile to javascript.</description>
+    </item>
+    
+    <item>
+      <title>Release It!</title>
+      <link>https://tiago.dalligna.com/2014/01/release-it/</link>
+      <pubDate>Thu, 09 Jan 2014 11:25:44 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/01/release-it/</guid>
+      <description>Someday your little database will grow up. When it hits the teenage years - about two in human years - it will get moody, sullen, and resentful. In the worst case, it will start undermining the whole system (and it will probably complain that nobody understands it, too).</description>
+    </item>
+    
+    <item>
+      <title>Sharepoint full page little trick</title>
+      <link>https://tiago.dalligna.com/2013/10/sharepoint-full-page-little-trick/</link>
+      <pubDate>Tue, 15 Oct 2013 13:20:58 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/10/sharepoint-full-page-little-trick/</guid>
+      <description>For those of you with a very specific task to create a hotsite in sharepoint(MOSS) and can&amp;rsquo;t (or dont want to) create a new template just for that, here it goes: https://gist.github.com/tiagodll/6990155 with this simple snippet your div is the new body of your page so go ahead and put the whole html code you need in there. Loading &amp;hellip;.</description>
+    </item>
+    
+    <item>
+      <title>Css expandabox</title>
+      <link>https://tiago.dalligna.com/2013/08/css-expandabox/</link>
+      <pubDate>Thu, 15 Aug 2013 22:21:43 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/08/css-expandabox/</guid>
+      <description>Those of you following my posts for a while might know that I like javascript. I like javascript as much as I like not using javascript when I can use css instead.
+So trying to make an expandable box I realised its behaviour is very similar to a checkbox. you have the small excerpt and when you click it you get the full text.
+That being said, it is possible not only to change the label properties according to its state, but to set its state by clicking the label.</description>
+    </item>
+    
+    <item>
+      <title>Elixir &#43; MongoDB &#43; Dynamo -&gt; because we are all web junkies</title>
+      <link>https://tiago.dalligna.com/2013/07/elixir--mongodb--dynamo-because-we-are-all-web-junkies/</link>
+      <pubDate>Sat, 13 Jul 2013 17:14:57 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/07/elixir--mongodb--dynamo-because-we-are-all-web-junkies/</guid>
+      <description>Now that you know how to have an elixir software accessing mongodb, what is the next logical step? to build a blog engine, obviously
+So lets get started, shall we?</description>
+    </item>
+    
+    <item>
+      <title>So, what is elixir?</title>
+      <link>https://tiago.dalligna.com/2013/06/so-what-is-elixir/</link>
+      <pubDate>Sun, 23 Jun 2013 17:15:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/06/so-what-is-elixir/</guid>
+      <description>A bit of background first: In my masters I had a module called Programming Paradigms and Languages. What this module is about is the different paradigms, and one language for each of them.
+The chosen languages were: Object Oriented: Ruby Functional: Clojure Logical: Prolog Process Oriented: Erlang Mathematical Programming: Matlab
+Out of that what I can say is:
+Ruby syntax is awesome. So elegant but there are many performance issues Clojure is very nice for the academic world, but I cant imagine anyone using it for commercial software building.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry pi &#43; ruby &#43; sinatra = #winning</title>
+      <link>https://tiago.dalligna.com/2012/11/raspberry-pi--ruby--sinatra-#winning/</link>
+      <pubDate>Wed, 07 Nov 2012 17:29:10 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/11/raspberry-pi--ruby--sinatra-#winning/</guid>
+      <description>There is something about hardware/low level development that amazes me. I am not really good at it, I don&amp;rsquo;t actually want to be, my relation with hardware is the same I have with sports: I love to learn new sports, practice it a little bit, but when it starts to get too competitive, ie, the guys are getting serious about it, I loose interest.
+That being said, I have to say I&amp;rsquo;ve played a lot with this things.</description>
+    </item>
+    
+    <item>
+      <title>PetaPoco. Said whaaaat?</title>
+      <link>https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/</link>
+      <pubDate>Sat, 24 Mar 2012 17:31:40 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/</guid>
+      <description>So, maybe some of you guys checked out my dead database project, the dNet.Db. It is free and open source @ http://dnetdb.codeplex.com/ I started developing that framework because I always thought it is important to automatize the simple and boring part of database. And by this I mean that it load an object values should be as easy as object.load(), or object.LoadList() if you want an array. And it was working fine.</description>
+    </item>
+    
+    <item>
+      <title>Aspnet_mvc</title>
+      <link>https://tiago.dalligna.com/2012/03/aspnet_mvc/</link>
+      <pubDate>Fri, 23 Mar 2012 17:37:27 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/aspnet_mvc/</guid>
+      <description>So seems like asp.net mvc is finally popular? That&amp;rsquo;s perfect, I mean, this is how it should have been since the beginning.
+Let&amp;rsquo;s start with what is mvc: Mvc is to build the application as model, view and controller. What does that means? It means that the view should be only responsible for showing the interface, the data access should be in the model layer, and everything else should be done by the controller.</description>
+    </item>
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://tiago.dalligna.com/2012/03/hello-world/</link>
+      <pubDate>Fri, 23 Mar 2012 17:30:26 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/hello-world/</guid>
+      <description>To start with, I&amp;rsquo;ll explain why I am creating this blog. Maybe you know my old blog. It is dead now. It was in my old server and I decided not to keep it, but what makes me mad is the domain. it expired and now I don&amp;rsquo;t even have email. Anyway, new blog, new posts, new life. I don&amp;rsquo;t hate java anymore, yay! Just kidding&amp;hellip; I still do. But not as much.</description>
+    </item>
+    
+  </channel>
+</rss>

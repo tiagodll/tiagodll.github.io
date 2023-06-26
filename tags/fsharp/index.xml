@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fsharp on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/fsharp/</link>
+    <description>Recent content in fsharp on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Mon, 09 Aug 2021 15:42:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/fsharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bolero</title>
+      <link>https://tiago.dalligna.com/2021/08/bolero/</link>
+      <pubDate>Mon, 09 Aug 2021 15:42:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/08/bolero/</guid>
+      <description>What do you think about blazor?
+What about Elm?
+What if Elm architecture was running in blazor, but in F#?
+Well, that is what bolero is about.
+Getting started Install dotnet if you haven&amp;rsquo;t already go to https://fsbolero.io/ and follow the 3 easy steps to have your app up and running Continue following this guide. Understanding the Elm architecture Bolero is based on the elm architecture.
+this is divided in 3 items:</description>
+    </item>
+    
+  </channel>
+</rss>

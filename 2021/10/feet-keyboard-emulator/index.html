@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feet keyboard emulator &middot; Tiago on tech</title>
+
+    <meta name="description" content="Have you ever thought about using your feet to a better computer experience?">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="feet keyboard emulator &middot; Tiago on tech">
+    <meta name="twitter:description" content="Have you ever thought about using your feet to a better computer experience?">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="feet keyboard emulator &middot; Tiago on tech">
+    <meta property="og:description" content="Have you ever thought about using your feet to a better computer experience?">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">27 Oct 2021, 14:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2021/10/feet-keyboard-emulator/" class="post-title">feet keyboard emulator</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-rasperry_pi" href='https://tiago.dalligna.com/tags/rasperry_pi'>rasperry_pi</a>
+                                
+                                    <a class="post-category post-category-raspberry_pi_pico" href='https://tiago.dalligna.com/tags/raspberry_pi_pico'>raspberry_pi_pico</a>
+                                
+                                    <a class="post-category post-category-hardware" href='https://tiago.dalligna.com/tags/hardware'>hardware</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>This is in old idea.</p>
+<p>I first thought of it when I tried to use VI.</p>
+<p>My finger was hurting from pressing Ctrl so often.</p>
+<p>And I thought: - If we use our feet to make driving more efficient, why not the pc?</p>
+<p>Well, here is your chance</p>
+<p><img src="bass_pedal.png" alt="pedal"></p>
+<h1 id="requirements">Requirements</h1>
+<ul>
+<li>1 Raspberry PI pico (4 usd)</li>
+<li>1 USB cable</li>
+<li>2 resistors (to be honest I still don&rsquo;t understand why this)</li>
+<li>2 cheap pedals. (~6 euros in dx.com)</li>
+</ul>
+<p>Assembling this is quite simple.</p>
+<p>If you can&rsquo;t do it, I am sure a friend would do this for you in no time.</p>
+<h1 id="setting-up-the-development-environment">setting up the development environment</h1>
+<h2 id="step-1-set-up-raspberry-pi-pico">Step 1: set up raspberry pi pico</h2>
+<p>Follow the guide <a href="https://datasheets.raspberrypi.com/pico/raspberry-pi-pico-python-sdk.pdf">here</a>
+once you have micropython working, and manage to access your pi, move over to step 2</p>
+<h2 id="step-2-install-thonny">Step 2: install Thonny</h2>
+<p>important: do not install snap or flatpack. I tried both and they don&rsquo;t work!
+follow this guide <a href="https://github.com/thonny/thonny/wiki/Linux">here</a></p>
+<h2 id="step-3-installing-circuitpython">Step 3: Installing CircuitPython</h2>
+<p>download the UF2 file <a href="https://circuitpython.org/board/raspberry_pi_pico/">here</a></p>
+<h2 id="step-4-libraries">Step 4: libraries</h2>
+<p>start thonny, click on the botton right button to change the python, select CircuitPython(generic), and the port witt your pico
+<img src="pedal_tutorial_libs.png" alt="libs"></p>
+<p>then click on tools / manage packages&hellip;. / search for adafruid_hid and install it
+<img src="pedal_tutorial_adafruit.png" alt="adafruit"></p>
+<p>all set,
+happy coding 😎 👍</p>
+<h1 id="the-code">the code:</h1>
+<p>This is a sample of the embedded app:
+thank you Idris for <a href="https://tutorial.cytron.io/2021/02/16/keyboard-emulator-using-raspberry-pi-pico-maker-pi-pico-and-circuitpython/">the code</a> post</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> board
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> digitalio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> usb_hid
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> adafruit_hid.keyboard <span style="color:#f92672">import</span> Keyboard
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> adafruit_hid.keyboard_layout_us <span style="color:#f92672">import</span> KeyboardLayoutUS
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> adafruit_hid.keycode <span style="color:#f92672">import</span> Keycode
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>keypress_pins <span style="color:#f92672">=</span> [board<span style="color:#f92672">.</span>GP13, board<span style="color:#f92672">.</span>GP14, board<span style="color:#f92672">.</span>GP15]
+</span></span><span style="display:flex;"><span>key_pin_array <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>keys_pressed <span style="color:#f92672">=</span> [Keycode<span style="color:#f92672">.</span>LEFT_ARROW, Keycode<span style="color:#f92672">.</span>RIGHT_ARROW, Keycode<span style="color:#f92672">.</span>SPACEBAR]
+</span></span><span style="display:flex;"><span>control_key <span style="color:#f92672">=</span> Keycode<span style="color:#f92672">.</span>SHIFT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># Sleep for a bit to avoid a race condition on some systems</span>
+</span></span><span style="display:flex;"><span>keyboard <span style="color:#f92672">=</span> Keyboard(usb_hid<span style="color:#f92672">.</span>devices)
+</span></span><span style="display:flex;"><span>keyboard_layout <span style="color:#f92672">=</span> KeyboardLayoutUS(keyboard)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Make all pin objects inputs with pullups</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> pin <span style="color:#f92672">in</span> keypress_pins:
+</span></span><span style="display:flex;"><span>    key_pin <span style="color:#f92672">=</span> digitalio<span style="color:#f92672">.</span>DigitalInOut(pin)
+</span></span><span style="display:flex;"><span>    key_pin<span style="color:#f92672">.</span>direction <span style="color:#f92672">=</span> digitalio<span style="color:#f92672">.</span>Direction<span style="color:#f92672">.</span>INPUT
+</span></span><span style="display:flex;"><span>    key_pin<span style="color:#f92672">.</span>pull <span style="color:#f92672">=</span> digitalio<span style="color:#f92672">.</span>Pull<span style="color:#f92672">.</span>UP
+</span></span><span style="display:flex;"><span>    key_pin_array<span style="color:#f92672">.</span>append(key_pin)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>led <span style="color:#f92672">=</span> digitalio<span style="color:#f92672">.</span>DigitalInOut(board<span style="color:#f92672">.</span>GP25)
+</span></span><span style="display:flex;"><span>led<span style="color:#f92672">.</span>direction <span style="color:#f92672">=</span> digitalio<span style="color:#f92672">.</span>Direction<span style="color:#f92672">.</span>OUTPUT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Waiting for key pin...&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> key_pin <span style="color:#f92672">in</span> key_pin_array:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> key_pin<span style="color:#f92672">.</span>value:  <span style="color:#75715e"># Is it grounded?</span>
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">=</span> key_pin_array<span style="color:#f92672">.</span>index(key_pin)
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;Pin #</span><span style="color:#e6db74">{}</span><span style="color:#e6db74"> is grounded.&#34;</span><span style="color:#f92672">.</span>format(i))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            led<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> <span style="color:#f92672">not</span> key_pin<span style="color:#f92672">.</span>value:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>  <span style="color:#75715e"># Wait for it to be ungrounded, to print on key up</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># &#34;Type&#34; the Keycode or string</span>
+</span></span><span style="display:flex;"><span>            key <span style="color:#f92672">=</span> keys_pressed[i]  <span style="color:#75715e"># Get the corresponding Keycode or string</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> isinstance(key, str):  <span style="color:#75715e"># If it&#39;s a string...</span>
+</span></span><span style="display:flex;"><span>                keyboard_layout<span style="color:#f92672">.</span>write(key)  <span style="color:#75715e"># ...Print the string</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:  <span style="color:#75715e"># If it&#39;s not a string...</span>
+</span></span><span style="display:flex;"><span>                keyboard<span style="color:#f92672">.</span>press(control_key, key)  <span style="color:#75715e"># &#34;Press&#34;...</span>
+</span></span><span style="display:flex;"><span>                keyboard<span style="color:#f92672">.</span>release_all()  <span style="color:#75715e"># ...&#34;Release&#34;!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            led<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    time<span style="color:#f92672">.</span>sleep(<span style="color:#ae81ff">0.01</span>)
+</span></span></code></pre></div><h1 id="run-it">Run it!</h1>
+<p>If you are using Thonny, all you have to do is to click on run.</p>
+<p>Now every time you press you pedal, you will get key press events on your computer.</p>
+<p>In this code, I configured arrow left, arrow right and spacebar.</p>
+<p>My code is part of the tabber project @ <a href="https://github.com/tiagodll/tabber/tree/master/src/pedal">github.com/tiagodll/tabber/tree/master/src/pedal</a></p>
+<p>Now that you have the hardware done, software uploaded and a bit of time to spare, grab your bass guitar and go have a try at <a href="https://tabber.dalligna.com">tabber.dalligna.com</a></p>
+<p>😉</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetaPoco. Said whaaaat? &middot; Tiago on tech</title>
+
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="PetaPoco. Said whaaaat? &middot; Tiago on tech">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PetaPoco. Said whaaaat? &middot; Tiago on tech">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">24 Mar 2012, 17:31</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/" class="post-title">PetaPoco. Said whaaaat?</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-csharp" href='https://tiago.dalligna.com/tags/csharp'>csharp</a>
+                                
+                                    <a class="post-category post-category-dotnet" href='https://tiago.dalligna.com/tags/dotnet'>dotnet</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>So, maybe some of you guys checked out my dead database project, the dNet.Db. It is free and open source @ <a href="http://dnetdb.codeplex.com/">http://dnetdb.codeplex.com/</a>
+I started developing that framework because I always thought  it is important to automatize the simple and boring part of database. And by this I mean that it load an object values should be as easy as object.load(), or object.LoadList() if you want an array.
+And it was working fine. But we all know how a project like that requires a lot of maintenance, adding new databases support, fixing bugs and things like that.</p>
+<p>A few weeks ago I was talking about this to a friend and he told me about the project massive.
+Massive is nice, but it doesn&rsquo;t support everything I needed (mainly because of the stored procedures), so trying to go further into that, I found the PetaPoco(<a href="http://www.toptensoftware.com/petapoco/)">http://www.toptensoftware.com/petapoco/)</a>.</p>
+<p>This is the kind of framework I consider that fit all my needs:</p>
+<ul>
+<li>really easy to install</li>
+<li>easy to fetch objects from the db</li>
+<li>supports sqlite</li>
+<li>allows you to use plain old SQL for all the other situations.</li>
+</ul>
+<p>So I&rsquo;ve been using it for a bit now, and it hasn&rsquo;t let me down. I am not thinking about using my framework anymore. So I decided to write a little tutorial of how it works.</p>
+<p>Install: There is a nuget for that. If you don&rsquo;t know what a nuget is, here is a link, probably I&rsquo;ll talk about this someday, but this is really cool, check it out.</p>
+<p>Model:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#a6e22e">[PetaPoco.PrimaryKey(&#34;Id&#34;)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Project</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>Voil&rsquo;a&hellip; Easy as pie&hellip;
+then you could say:-Hum&hellip; the loading part might be tricky&hellip;.
+not really&hellip; this is the code:</p>
+<p>var db = new PetaPoco.Database(&ldquo;Base&rdquo;);
+ViewBag.Projects = db.Fetch&lt;Models.Project&gt;(&quot;&quot;);</p>
+<p>and that&rsquo;s it.
+Ok, that&rsquo;s not it. Well it is if you have a really simple object, but you don&rsquo;t.
+So&hellip; now comes the tricky part?
+Yes. Compared to the other part it is. but not so much</p>
+<p>The loading bit is exactly the same, but now I&rsquo;ll add some more code to the model:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#a6e22e">   [PetaPoco.PrimaryKey(&#34;Id&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Feature</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> ParentId { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> ProjectId { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Title { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Description { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [PetaPoco.ResultColumn]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Project project { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [PetaPoco.PrimaryKey(&#34;Id&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Project</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Id { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">        [PetaPoco.ResultColumn]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Dictionary&lt;<span style="color:#66d9ef">long</span>, Feature&gt; Features { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProjectFeatureRelator</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Dictionary&lt;<span style="color:#66d9ef">long</span>, Feature&gt; features = <span style="color:#66d9ef">new</span> Dictionary&lt;<span style="color:#66d9ef">long</span>, Feature&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Project MapIt(Project p, Feature f)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Feature fExisting;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (features.TryGetValue(f.Id, <span style="color:#66d9ef">out</span> fExisting))
+</span></span><span style="display:flex;"><span>                f = fExisting;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                features.Add(f.Id, f);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            f.project = p;
+</span></span><span style="display:flex;"><span>            p.Features = features;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> p;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }</span></span></code></pre></div></p>
+<p>Now, this looks a lot, but let&rsquo;s understand what happened there:
+1 - I&rsquo;ve added a new class (feature). This class have a primary key Id, and I want it to load the project associated with it.
+2 - I&rsquo;ve added a new property to the project class:Features. this is because I want the list of features to be loaded as well. Note that I&rsquo;ve annotated the [PetaPoco.ResultColumn] to make the connection.
+3 - So far so good, but now comes the ugly part: the join. I admit it is not an elegant code as the rest, but it is not so bad, and it is very easy, you just have to copy it, and use it in your code.</p>
+<p>I don&rsquo;t know if it is a good idea to use this in a big project, but for the small ones, I will definitely use it.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

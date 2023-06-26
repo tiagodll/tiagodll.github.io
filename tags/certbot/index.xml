@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>certbot on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/certbot/</link>
+    <description>Recent content in certbot on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Wed, 08 Sep 2021 10:23:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/certbot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certbot</title>
+      <link>https://tiago.dalligna.com/2021/09/certbot/</link>
+      <pubDate>Wed, 08 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/certbot/</guid>
+      <description>my certificate is expired and certbot This gives me a message &amp;ldquo;your current client, does not support ACME v2 at all. You will need to migrate to a different one&amp;rdquo;, but there is nothing I can do to update my certbot.
+So I did some googling around, and found nothing that helped me.
+It is worth to note that this was in an old server with ubuntu 17.
+Now there is one thing I can do: remove it and install it again!</description>
+    </item>
+    
+  </channel>
+</rss>

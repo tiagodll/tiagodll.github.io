@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csharp on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/csharp/</link>
+    <description>Recent content in csharp on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sat, 24 Mar 2012 17:31:40 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PetaPoco. Said whaaaat?</title>
+      <link>https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/</link>
+      <pubDate>Sat, 24 Mar 2012 17:31:40 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/</guid>
+      <description>So, maybe some of you guys checked out my dead database project, the dNet.Db. It is free and open source @ http://dnetdb.codeplex.com/ I started developing that framework because I always thought it is important to automatize the simple and boring part of database. And by this I mean that it load an object values should be as easy as object.load(), or object.LoadList() if you want an array. And it was working fine.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sharepoint on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/sharepoint/</link>
+    <description>Recent content in sharepoint on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Tue, 15 Oct 2013 13:20:58 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/sharepoint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sharepoint full page little trick</title>
+      <link>https://tiago.dalligna.com/2013/10/sharepoint-full-page-little-trick/</link>
+      <pubDate>Tue, 15 Oct 2013 13:20:58 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2013/10/sharepoint-full-page-little-trick/</guid>
+      <description>For those of you with a very specific task to create a hotsite in sharepoint(MOSS) and can&amp;rsquo;t (or dont want to) create a new template just for that, here it goes: https://gist.github.com/tiagodll/6990155 with this simple snippet your div is the new body of your page so go ahead and put the whole html code you need in there. Loading &amp;hellip;.</description>
+    </item>
+    
+  </channel>
+</rss>

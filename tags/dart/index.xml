@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dart on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/dart/</link>
+    <description>Recent content in dart on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sun, 10 Aug 2014 17:06:06 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/dart/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dart &#43; start &#43; polymer = ?</title>
+      <link>https://tiago.dalligna.com/2014/08/dart--start--polymer/</link>
+      <pubDate>Sun, 10 Aug 2014 17:06:06 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/08/dart--start--polymer/</guid>
+      <description>So as I said in my Dart, what do we think about it? post, it is an interesting language to look into. It is lacking good libraries, but a problem can also be seen as an opportunity: it is a great time build your own.
+Back to the topic, because of the pub system it is very easy to have dart + start or dart + polymer, but not as easy to have both.</description>
+    </item>
+    
+    <item>
+      <title>Dart, what do we think about it?</title>
+      <link>https://tiago.dalligna.com/2014/07/dart-what-do-we-think-about-it/</link>
+      <pubDate>Thu, 24 Jul 2014 17:04:43 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/07/dart-what-do-we-think-about-it/</guid>
+      <description>yeah, about that&amp;hellip;
+Google&amp;rsquo;s attempt to improve on Javascript and get a server-side language at the same time. I have always wanted something else to thrive over javascript, and tried many good options like coffeescript or opal. Most of them are really good and easy to use as long as everything is correct. Sadly that is not what happens. The bug fixing is a vital phase of software development, and in this is the problem with all the languages that compile to javascript.</description>
+    </item>
+    
+    <item>
+      <title>Dart</title>
+      <link>https://tiago.dalligna.com/2014/07/dart/</link>
+      <pubDate>Thu, 24 Jul 2014 11:19:27 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2014/07/dart/</guid>
+      <description>yeah, about that&amp;hellip;
+Google&amp;rsquo;s attempt to improve on Javascript and get a server-side language at the same time. I have always wanted something else to thrive over javascript, and tried many good options like coffeescript or opal. Most of them are really good and easy to use as long as everything is correct. Sadly that is not what happens. The bug fixing is a vital phase of software development, and in this is the problem with all the languages that compile to javascript.</description>
+    </item>
+    
+  </channel>
+</rss>

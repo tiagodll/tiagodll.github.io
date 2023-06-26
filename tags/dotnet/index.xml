@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dotnet on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/dotnet/</link>
+    <description>Recent content in dotnet on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Mon, 09 Aug 2021 15:42:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/dotnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bolero</title>
+      <link>https://tiago.dalligna.com/2021/08/bolero/</link>
+      <pubDate>Mon, 09 Aug 2021 15:42:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/08/bolero/</guid>
+      <description>What do you think about blazor?
+What about Elm?
+What if Elm architecture was running in blazor, but in F#?
+Well, that is what bolero is about.
+Getting started Install dotnet if you haven&amp;rsquo;t already go to https://fsbolero.io/ and follow the 3 easy steps to have your app up and running Continue following this guide. Understanding the Elm architecture Bolero is based on the elm architecture.
+this is divided in 3 items:</description>
+    </item>
+    
+    <item>
+      <title>PetaPoco. Said whaaaat?</title>
+      <link>https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/</link>
+      <pubDate>Sat, 24 Mar 2012 17:31:40 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/petapoco.-said-whaaaat/</guid>
+      <description>So, maybe some of you guys checked out my dead database project, the dNet.Db. It is free and open source @ http://dnetdb.codeplex.com/ I started developing that framework because I always thought it is important to automatize the simple and boring part of database. And by this I mean that it load an object values should be as easy as object.load(), or object.LoadList() if you want an array. And it was working fine.</description>
+    </item>
+    
+    <item>
+      <title>Aspnet_mvc</title>
+      <link>https://tiago.dalligna.com/2012/03/aspnet_mvc/</link>
+      <pubDate>Fri, 23 Mar 2012 17:37:27 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/03/aspnet_mvc/</guid>
+      <description>So seems like asp.net mvc is finally popular? That&amp;rsquo;s perfect, I mean, this is how it should have been since the beginning.
+Let&amp;rsquo;s start with what is mvc: Mvc is to build the application as model, view and controller. What does that means? It means that the view should be only responsible for showing the interface, the data access should be in the model layer, and everything else should be done by the controller.</description>
+    </item>
+    
+  </channel>
+</rss>

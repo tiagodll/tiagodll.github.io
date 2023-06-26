@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/devops/</link>
+    <description>Recent content in devops on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sun, 28 Nov 2021 18:24:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replace your docker with 3 easy steps</title>
+      <link>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</link>
+      <pubDate>Sun, 28 Nov 2021 18:24:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/11/replace-your-docker-with-3-easy-steps/</guid>
+      <description>I don&amp;rsquo;t like managing servers. This is a well-known fact. My way around it was to set up all my apps using docker, and that made me happy.
+After my small server ran out of space with only 5 web apps running, I started changing my mind. On top of this, I used GitHub actions with azure, and loved it.
+For that reason I moved my dotnet webapp from docker to a Linux service automatically deployed by github actions.</description>
+    </item>
+    
+    <item>
+      <title>Certbot</title>
+      <link>https://tiago.dalligna.com/2021/09/certbot/</link>
+      <pubDate>Wed, 08 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/certbot/</guid>
+      <description>my certificate is expired and certbot This gives me a message &amp;ldquo;your current client, does not support ACME v2 at all. You will need to migrate to a different one&amp;rdquo;, but there is nothing I can do to update my certbot.
+So I did some googling around, and found nothing that helped me.
+It is worth to note that this was in an old server with ubuntu 17.
+Now there is one thing I can do: remove it and install it again!</description>
+    </item>
+    
+  </channel>
+</rss>

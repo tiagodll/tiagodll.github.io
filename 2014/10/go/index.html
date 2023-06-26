@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go &middot; Tiago on tech</title>
+
+    <meta name="description" content="My thoughts and experiences with go">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Go &middot; Tiago on tech">
+    <meta name="twitter:description" content="My thoughts and experiences with go">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Go &middot; Tiago on tech">
+    <meta property="og:description" content="My thoughts and experiences with go">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">02 Oct 2014, 11:16</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2014/10/go/" class="post-title">Go</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-go" href='https://tiago.dalligna.com/tags/go'>go</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p><img src="http://golang.org/doc/gopher/frontpage.png" alt="Go logo" title="go logo"></p>
+<p>C is fast, but boring,
+Ruby is slow, but fun.
+Go is right in between</p>
+<p>Let&rsquo;s start with the fun bits:</p>
+<ul>
+<li>
+<p>You don&rsquo;t import just a file, you import a repository.
+Reading import &ldquo;github.com/tiagodll/golib&rdquo; is beautiful, that alone gets me excited about go.</p>
+</li>
+<li>
+<p>Returning multiple values. Yes, finally!
+You can set resp, err := MyFunction()</p>
+</li>
+<li>
+<p>Ditching the ;. I never got the reason for it, maybe it is because I learned programming with VB, but to me it just doesn&rsquo;t make sense.</p>
+</li>
+</ul>
+<p>Now to the boring</p>
+<ul>
+<li>The name. Seems like nothing, but having a language called go makes google searches useless unless you use golang.</li>
+<li>Not having try/catch. It sucks. Although returning value, error makes up for it quite well.</li>
+<li>Having any not used lib/variable as an error instead of warning. It is ok when you have a final version, but that is really annoying while development phase.
+And the worst of all:</li>
+<li>the insane amount of extra lines to assign a variable such as
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">temp</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">MyType</span>{<span style="color:#a6e22e">id</span>:<span style="color:#ae81ff">123</span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">GetValueFromMongo</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">temp</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%v&#34;</span>, <span style="color:#a6e22e">temp</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Instead</span> <span style="color:#a6e22e">of</span> <span style="color:#a6e22e">a</span> <span style="color:#a6e22e">simple</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">puts</span> <span style="color:#a6e22e">get_value_from_mongo</span>(<span style="color:#ae81ff">123</span>).<span style="color:#a6e22e">to_s</span></span></span></code></pre></div></li>
+</ul>
+<p>and the grey area</p>
+<ul>
+<li>Not having classes. I like the idea of having all static methods (unless it is really about the object they are in), but not having classes could have some issues, specially because of inheritance.</li>
+</ul>
+<p>Regardless, this is my current language of choice.
+But this is just the beginning.
+Let&rsquo;s see next what go is all about.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sinatra on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/sinatra/</link>
+    <description>Recent content in sinatra on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Wed, 07 Nov 2012 17:29:10 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/sinatra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Raspberry pi &#43; ruby &#43; sinatra = #winning</title>
+      <link>https://tiago.dalligna.com/2012/11/raspberry-pi--ruby--sinatra-#winning/</link>
+      <pubDate>Wed, 07 Nov 2012 17:29:10 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2012/11/raspberry-pi--ruby--sinatra-#winning/</guid>
+      <description>There is something about hardware/low level development that amazes me. I am not really good at it, I don&amp;rsquo;t actually want to be, my relation with hardware is the same I have with sports: I love to learn new sports, practice it a little bit, but when it starts to get too competitive, ie, the guys are getting serious about it, I loose interest.
+That being said, I have to say I&amp;rsquo;ve played a lot with this things.</description>
+    </item>
+    
+  </channel>
+</rss>

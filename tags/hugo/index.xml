@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/hugo/</link>
+    <description>Recent content in hugo on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sat, 12 Jun 2021 17:50:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo blog engine</title>
+      <link>https://tiago.dalligna.com/2021/06/hugo-blog-engine/</link>
+      <pubDate>Sat, 12 Jun 2021 17:50:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/06/hugo-blog-engine/</guid>
+      <description>After almost 10 years of blogging in blogger (with a very low frequency), I decided to self host my blog. So then I had to decide what to go with
+Requirements: Markdown - I have been a web developer for more than 20 years. Because of that, my growing hatred towards WYSYWYG editors peaked while I was working in a custom CMS. In 2013 my company started using redmine (a markdown)</description>
+    </item>
+    
+  </channel>
+</rss>

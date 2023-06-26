@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dart &#43; start &#43; polymer = ? &middot; Tiago on tech</title>
+
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Dart &#43; start &#43; polymer = ? &middot; Tiago on tech">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Dart &#43; start &#43; polymer = ? &middot; Tiago on tech">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">10 Aug 2014, 17:06</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2014/08/dart--start--polymer/" class="post-title">Dart &#43; start &#43; polymer = ?</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-dart" href='https://tiago.dalligna.com/tags/dart'>dart</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>So as I said in my <!-- raw HTML omitted -->Dart, what do we think about it?<!-- raw HTML omitted --> post, it is an interesting language to look into. It is lacking good libraries, but a problem can also be seen as an opportunity: it is a great time build your own.</p>
+<p>Back to the topic, because of the pub system it is very easy to have dart + start <!-- raw HTML omitted -->or<!-- raw HTML omitted --> dart + polymer, but not as easy to have both.</p>
+<p>There is a teeny-tiny detail it took me a couple of days to realize, but let me save this to the end of the post.</p>
+<p>Start is simple, lets begin with that.
+first, the pubspec</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>code file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pubspec.yaml&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>name: onemore
+</span></span><span style="display:flex;"><span>description: A sample Polymer application
+</span></span><span style="display:flex;"><span>dependencies:
+</span></span><span style="display:flex;"><span>  polymer: <span style="color:#e6db74">&#39;&gt;=0.11.0&#39;</span>
+</span></span><span style="display:flex;"><span>  start: any
+</span></span><span style="display:flex;"><span>transformers:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span> polymer:
+</span></span><span style="display:flex;"><span>    entry_points: web<span style="color:#f92672">/</span>index.html
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>code<span style="color:#f92672">&gt;</span></span></span></code></pre></div>
+<p>Then all you need to do is to import the package and create a server side dart file to start it.
+In this example I am only serving static files, it would be just as easy to handle dynamic content with the get(url).
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>code file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app.dart&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:start/start.dart&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>main(args) {
+</span></span><span style="display:flex;"><span>  start(port: <span style="color:#ae81ff">3000</span>).then((Server app) { app.<span style="color:#66d9ef">static</span>(<span style="color:#e6db74">&#39;build/web&#39;</span>, jail: <span style="color:#66d9ef">false</span>); });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>code<span style="color:#f92672">&gt;</span></span></span></code></pre></div></p>
+<p>Done, you have a web server running in http://localhost:3000 as soon as you run this code.</p>
+<p>Now, the polymer part
+to have a custom element we need 3 files: the dart, the html and the hosting html file.
+this custom element expects a String list, and publish (sends to the client) both lst and plist.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>code file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;elementlist.dart&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;package:polymer/polymer.dart&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;dart:convert&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@</span>CustomTag(<span style="color:#e6db74">&#39;element-list&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ElementsList</span> <span style="color:#66d9ef">extends</span> PolymerElement {
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>published <span style="color:#66d9ef">String</span> list;
+</span></span><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">@</span>published List plist;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ElementsList.created() <span style="color:#f92672">:</span> <span style="color:#66d9ef">super</span>.created(){
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>{
+</span></span><span style="display:flex;"><span>      plist <span style="color:#f92672">=</span> JSON.decode(list);
+</span></span><span style="display:flex;"><span>      plist.add({<span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;test&#34;</span>});
+</span></span><span style="display:flex;"><span>    }<span style="color:#66d9ef">catch</span>(e){
+</span></span><span style="display:flex;"><span>      print(e.toString());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    polymerCreated();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>code<span style="color:#f92672">&gt;</span></span></span></code></pre></div></p>
+<p>Here in the html we can use mustache style expressions
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">code</span> <span style="color:#a6e22e">file</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;elementlist.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;import&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;packages/polymer/polymer.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">polymer-element</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;element-list&#34;</span> <span style="color:#a6e22e">attributes</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span>&gt;the list: {{ list }}&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">repeat</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{elmt in plist}}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#f92672">li</span>&gt;{{elmt[&#34;id&#34;]}}&lt;/<span style="color:#f92672">li</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#f92672">ul</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">template</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/dart&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;elementlist.dart&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">polymer-element</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">code</span>&gt;</span></span></code></pre></div></p>
+<p>and then your index file you just have to add some references and include the custom element element-list.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">code</span> <span style="color:#a6e22e">file</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;Sample app&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;packages/web_components/platform.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;packages/web_components/dart_support.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- import the click-counter --&gt;</span>
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;import&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;elementlist.html&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;application/dart&#34;</span>&gt;<span style="color:#66d9ef">export</span> <span style="color:#e6db74">&#39;package:polymer/init.dart&#39;</span>;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;packages/browser/dart.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span> <span style="color:#a6e22e">unresolved</span> <span style="color:#a6e22e">touch-action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    before list&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>    ---------------------&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">element-list</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;the_list&#34;</span> <span style="color:#a6e22e">list</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;[{&#34;id&#34;:1},{&#34;id&#34;:2},{&#34;id&#34;:3}]&#39;</span>&gt;&lt;/<span style="color:#f92672">element-list</span>&gt;
+</span></span><span style="display:flex;"><span>    ---------------------&lt;<span style="color:#f92672">br</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">code</span>&gt;</span></span></code></pre></div></p>
+<p>Now, let me explain the little detail that made me lose so much time: start is just serving the folder specified above. The problem is that all the polymer javascript is generated in the build, and stored there. So our start must serve that folder instead.
+to do that, all we have to do is to change the web to build/web in the start method:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>app.<span style="color:#66d9ef">static</span>(<span style="color:#e6db74">&#39;build/web&#39;</span>, jail: <span style="color:#66d9ef">false</span>);</span></span></code></pre></div></p>
+<p>That is all folks, hope you enjoy it.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugo blog engine &middot; Tiago on tech</title>
+
+    <meta name="description" content="What a cool blogging system">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Hugo blog engine &middot; Tiago on tech">
+    <meta name="twitter:description" content="What a cool blogging system">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hugo blog engine &middot; Tiago on tech">
+    <meta property="og:description" content="What a cool blogging system">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">12 Jun 2021, 17:50</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2021/06/hugo-blog-engine/" class="post-title">Hugo blog engine</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-go" href='https://tiago.dalligna.com/tags/go'>go</a>
+                                
+                                    <a class="post-category post-category-hugo" href='https://tiago.dalligna.com/tags/hugo'>hugo</a>
+                                
+                                    <a class="post-category post-category-blog" href='https://tiago.dalligna.com/tags/blog'>blog</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>After almost 10 years of blogging in blogger (with a very low frequency),
+I decided to self host my blog.
+So then I had to decide what to go with</p>
+<h2 id="requirements">Requirements:</h2>
+<ol>
+<li>
+<p><strong>Markdown</strong> - I have been a web developer for more than 20 years. Because of that, my growing hatred towards WYSYWYG editors peaked while I was working in a custom CMS. In 2013 my company started using redmine (a markdown)</p>
+<p>I got used to markdown while using redmine at work. Since then, I have been using it for everything. Even tocobooks mas markdown as its text editor.</p>
+</li>
+<li>
+<p><strong>self hosted</strong> - I dont want to have my content locked in someone else&rsquo;s database</p>
+</li>
+<li>
+<p><strong>no database</strong> - it is sad to see the effort the blog engines take to give you version control, when you could just keep your .md files in git. And that is on top of the main reason: you own your text files.</p>
+</li>
+<li>
+<p><strong>low or no maintenance</strong> - I like ruby, but my experience with it is: server needs constant maintenance.
+Go on the other hand is a lot more stable, and lightweight.
+Dotnet would be ideal, as I already keep always up to date in my server.</p>
+</li>
+<li>
+<p><strong>easy to modify</strong> - I started programming web apps in PHP in the early 2000&rsquo;s. I understand why it is so popular for blogging. the fact that you can just include .php files anywhere gives a flexibility that is very dificult to match.</p>
+</li>
+</ol>
+<p>Considering all this points, Hugo seems like the obvious choice (in 2021).</p>
+<ul>
+<li>
+<p>markdown - check!</p>
+</li>
+<li>
+<p>self hosted - check!</p>
+</li>
+<li>
+<p>no database - check!</p>
+</li>
+<li>
+<p>low or no maintenance - definitely check!</p>
+<p>hugo generates static html and you can host it anywhere</p>
+</li>
+<li>
+<p>easy to modify - yes</p>
+<p>not as it would be with php, but hey, considering the other benefits, it is a no brainer.</p>
+</li>
+</ul>
+<h2 id="my-tips-to-get-it-up-and-running">My tips to get it up and running</h2>
+<h3 id="--hugo-should-not-be-installed-in-your-server">- <strong>Hugo should not be installed in your server.</strong></h3>
+<p>The installed version is for development and exporting the files.
+You will copy the generated static site to nginx, apache or something similar.</p>
+<p>If you are impatient like me, you might rush into having it all running directly in the server (I even edited the first posts directly there), and then will be thinking: -Ok, I have it running in the server. How do I run as a service now?</p>
+<h3 id="--you-should-host-your-blog-using-a-simple-web-server">- <strong>You should host your blog using a simple web server</strong></h3>
+<p>Since it is just a static site, you can host it anywhere.</p>
+<h3 id="--everything-will-hardcoded-with-the-baseurl-from-your-config-file">- <strong>Everything will hardcoded with the baseurl from your config file</strong></h3>
+<p>It is obvious, but sometimes it take a bit too long to process it.</p>
+<p>My theme was looking weird. At first I thought the theme was not working, but then I realised it was the baseUrl</p>
+<h3 id="--keep-your-local-dev-environmnet-in-source-control">- <strong>Keep your local dev environmnet in source control</strong></h3>
+<p>Or at least your config and md files.</p>
+<p>Just in case</p>
+<h2 id="will-i-continue-with-this-in-the-future">Will I continue with this in the Future</h2>
+<p>Not sure.</p>
+<p>So far it seems good.</p>
+<p>It took some effort to move away from blogger, but now I have it as markdown files, so it could be easy to migrate again.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

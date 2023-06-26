@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ubuntu on Tiago on tech</title>
+    <link>https://tiago.dalligna.com/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on Tiago on tech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Tiago Almeida Dall&#39;Igna</copyright>
+    <lastBuildDate>Sat, 18 Sep 2021 10:23:00 +0200</lastBuildDate><atom:link href="https://tiago.dalligna.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>server update</title>
+      <link>https://tiago.dalligna.com/2021/09/server-update/</link>
+      <pubDate>Sat, 18 Sep 2021 10:23:00 +0200</pubDate>
+      
+      <guid>https://tiago.dalligna.com/2021/09/server-update/</guid>
+      <description>God dammit ubuntu! I have to start by admitting one thing: I use to hate servers. Every time I even had to open a remote connection, that would ruin my mood. Granted, I am a web developer, my work depends on it. But still…
+All that is just to explain why I haven’t updated my ancient server for a few years
+Ok, time to roll up my… well, I don’t really wear long sleeves… Anyway, I take a deep breath and try to upgrade it.</description>
+    </item>
+    
+  </channel>
+</rss>

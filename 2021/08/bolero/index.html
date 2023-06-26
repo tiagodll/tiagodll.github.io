@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolero &middot; Tiago on tech</title>
+
+    <meta name="description" content="elm &#43; blazor = bolero">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Bolero &middot; Tiago on tech">
+    <meta name="twitter:description" content="elm &#43; blazor = bolero">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Bolero &middot; Tiago on tech">
+    <meta property="og:description" content="elm &#43; blazor = bolero">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">09 Aug 2021, 15:42</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2021/08/bolero/" class="post-title">Bolero</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-fsharp" href='https://tiago.dalligna.com/tags/fsharp'>fsharp</a>
+                                
+                                    <a class="post-category post-category-dotnet" href='https://tiago.dalligna.com/tags/dotnet'>dotnet</a>
+                                
+                                    <a class="post-category post-category-bolero" href='https://tiago.dalligna.com/tags/bolero'>bolero</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p>What do you think about blazor?</p>
+<p>What about Elm?</p>
+<p>What if Elm architecture was running in blazor, but in F#?</p>
+<p>Well, that is what bolero is about.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/Fsharp_logo.png" alt="Fsharp"></p>
+<h2 id="getting-started">Getting started</h2>
+<ol>
+<li>Install dotnet if you haven&rsquo;t already</li>
+<li>go to <a href="https://fsbolero.io/">https://fsbolero.io/</a> and follow the 3 easy steps to have your app up and running</li>
+<li>Continue following this guide.</li>
+</ol>
+<h2 id="understanding-the-elm-architecture">Understanding the Elm architecture</h2>
+<p>Bolero is based on the elm architecture.</p>
+<p>this is divided in 3 items:</p>
+<ul>
+<li><strong>Model</strong>: it represents the current state of the app.</li>
+<li><strong>update</strong>: this function is the only way to change your model.</li>
+<li><strong>render</strong>: it is how your html will be rendered.</li>
+</ul>
+<p>Well, there is also the init function, where you give the initial state of the application.</p>
+<p>But that is it. Anything else is built on top of this 3 items.</p>
+<p>Simple, no?</p>
+<p><img src="https://guide.elm-lang.org/architecture/buttons.svg" alt="Elm architecture"></p>
+<h2 id="model">Model</h2>
+<p>there is only one model,
+it is global (inside the component) and it contains every detail in the application.
+your working data, cached values, state of the dropdowns and popups&hellip; everything</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-FSharp" data-lang="FSharp"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Model</span> <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>				page<span style="color:#f92672">:</span> Page
+</span></span><span style="display:flex;"><span>				date<span style="color:#f92672">:</span> DateTime
+</span></span><span style="display:flex;"><span>				error<span style="color:#f92672">:</span> <span style="color:#66d9ef">string</span> option
+</span></span><span style="display:flex;"><span>				items<span style="color:#f92672">:</span> Item <span style="color:#66d9ef">list</span>
+</span></span><span style="display:flex;"><span>				others<span style="color:#f92672">:</span> Other <span style="color:#66d9ef">list</span>
+</span></span><span style="display:flex;"><span>				touchInfo<span style="color:#f92672">:</span> TouchInfo
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="update">Update</h2>
+<p>Nothing can change in the model without being part of this method.
+It is a blessing and a curse.
+It is much easier to find out where something is being updated, but you end up with huge update methods.
+Then you can start passing the update to another function.
+This helps with the size, and it is ok if you are well organized. but it could also mess up your codebase.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-FSharp" data-lang="FSharp"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> update message model <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">match</span> message <span style="color:#66d9ef">with</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">|</span> SetPage page <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span> model <span style="color:#66d9ef">with</span> page <span style="color:#f92672">=</span> page <span style="color:#f92672">},</span> Cmd.none
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">|</span> Error <span style="color:#66d9ef">exn</span> <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span> model <span style="color:#66d9ef">with</span> error <span style="color:#f92672">=</span> Some <span style="color:#66d9ef">exn</span><span style="color:#f92672">.</span>Message <span style="color:#f92672">},</span> Cmd.none
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">|</span> ClearError <span style="color:#f92672">-&gt;</span> <span style="color:#f92672">{</span> model <span style="color:#66d9ef">with</span> error <span style="color:#f92672">=</span> None <span style="color:#f92672">},</span> Cmd.none
+</span></span><span style="display:flex;"><span>		<span style="color:#f92672">...</span>
+</span></span></code></pre></div><h2 id="view">View</h2>
+<p>The view is called on every update to the model.
+You can use functions to represent the html, and also include some logic to hide or display items based on the model.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-FSharp" data-lang="FSharp"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> view model dispatch <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>    div <span style="color:#f92672">[</span>attr<span style="color:#f92672">.</span>``class`` <span style="color:#e6db74">&#34;columns&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">[</span>
+</span></span><span style="display:flex;"><span>        div[]<span style="color:#f92672">[</span>text <span style="color:#e6db74">&#34; x &#34;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        div<span style="color:#f92672">[</span>attr<span style="color:#f92672">.</span>``class`` <span style="color:#e6db74">&#34;has-text-centered&#34;</span><span style="color:#f92672">][</span>
+</span></span><span style="display:flex;"><span>            button<span style="color:#f92672">[</span>attr<span style="color:#f92672">.</span>classes <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;button&#34;</span><span style="color:#f92672">;</span> <span style="color:#e6db74">&#34;is-small&#34;</span><span style="color:#f92672">];</span> on<span style="color:#f92672">.</span>click <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> <span style="color:#f92672">_</span> <span style="color:#f92672">-&gt;</span> dispatch PreviousDay<span style="color:#f92672">)][</span>text <span style="color:#e6db74">&#34;&lt;&#34;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>            span<span style="color:#f92672">[</span>attr<span style="color:#f92672">.</span>classes <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;dashboard-date&#34;</span><span style="color:#f92672">]][</span>text <span style="color:#f92672">(</span>model<span style="color:#f92672">.</span>date<span style="color:#f92672">.</span>ToString<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd&#34;</span><span style="color:#f92672">))]</span>
+</span></span><span style="display:flex;"><span>            button<span style="color:#f92672">[</span>attr<span style="color:#f92672">.</span>classes <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;button&#34;</span><span style="color:#f92672">;</span> <span style="color:#e6db74">&#34;is-small&#34;</span><span style="color:#f92672">];</span> on<span style="color:#f92672">.</span>click <span style="color:#f92672">(</span><span style="color:#66d9ef">fun</span> <span style="color:#f92672">_</span> <span style="color:#f92672">-&gt;</span> dispatch NextDay<span style="color:#f92672">)][</span>text <span style="color:#e6db74">&#34;&gt;&#34;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">]</span>
+</span></span></code></pre></div><h2 id="understanding-monads">Understanding monads</h2>
+<p>Nah, just kidding
+I believe having this basics of functional programming everywhere is one of the reasons of why people never go deep into it.
+Nobody needs yet another &ldquo;let me explain functional for dummies&rdquo;
+If you are like me, you rather start a project and learn along with it.</p>
+<h2 id="aha-moments">aha moments</h2>
+<p>There are a few moments where I got stuck, but then it all make sense</p>
+<h3 id="any-update-to-the-model-is-automatically-reflected-in-the-gui">Any update to the model is automatically reflected in the GUI</h3>
+<p>yes, you dont have to add any function</p>
+<h3 id="the-only-way-to-update-the-gui-is-by-changing-the-model">The ONLY way to update the GUI is by changing the model</h3>
+<p>That means anything you want to change <strong>must</strong> be in the model. Even state of your dropdown, popup, etc</p>
+<h3 id="you-can-use-anything-from-c">You can use anything from C#</h3>
+<p>But please don&rsquo;t overuse it. Try to keep consistent using F# types and functions.</p>
+<h3 id="i-can-modify-the-default-functions">I can modify the default functions</h3>
+<p>Just because the update function doesn&rsquo;t have a parameter I want, it doesn&rsquo;t mean it cannot have.</p>
+<p>In this example I was stuck for 2 days trying to access the JavaScript runtime from the client side.</p>
+<p>Then I found out I can pass my own update method with that parameter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-FSharp" data-lang="FSharp"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> update <span style="color:#f92672">=</span> update this<span style="color:#f92672">.</span>JSRuntime Program.mkProgram init update view
+</span></span></code></pre></div><h3 id="i-can-easily-interop-with-javascript-from-bolero-client">I can easily interop with javascript from bolero client</h3>
+<p>The interop will not only call functions passing integers/strings
+It will pass objects between javascript and bolero.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-FSharp" data-lang="FSharp"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> LoadCheckins <span style="color:#f92672">(</span>js<span style="color:#f92672">:</span>IJSRuntime<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>date<span style="color:#f92672">:</span>DateTime<span style="color:#f92672">)</span> <span style="color:#f92672">=</span> Cmd.OfJS.either js <span style="color:#e6db74">&#34;FromStorage&#34;</span> <span style="color:#f92672">[|</span> <span style="color:#e6db74">&#34;checkins_&#34;</span> <span style="color:#f92672">+</span> date<span style="color:#f92672">.</span>ToString<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;yyyy-MM-dd&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">|]</span> CheckinsLoaded Error
+</span></span></code></pre></div>
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

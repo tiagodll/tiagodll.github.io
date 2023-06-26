@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PureScript web app for dummies - part 3 &middot; Tiago on tech</title>
+
+    <meta name="description" content="A dead simple guide of how to make a web app using purescript">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="PureScript web app for dummies - part 3 &middot; Tiago on tech">
+    <meta name="twitter:description" content="A dead simple guide of how to make a web app using purescript">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PureScript web app for dummies - part 3 &middot; Tiago on tech">
+    <meta property="og:description" content="A dead simple guide of how to make a web app using purescript">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">31 Mar 2022, 20:00</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/" class="post-title">PureScript web app for dummies - part 3</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-PureScript" href='https://tiago.dalligna.com/tags/PureScript'>PureScript</a>
+                                
+                                    <a class="post-category post-category-purs" href='https://tiago.dalligna.com/tags/purs'>purs</a>
+                                
+                                    <a class="post-category post-category-spork" href='https://tiago.dalligna.com/tags/spork'>spork</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p><img src="https://www.purescript.org/img/logo.svg" alt="https://www.purescript.org/img/logo.svg"></p>
+<h1 id="recap">recap</h1>
+<p><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/">In the previous post</a>, we created a little client side app to create, update and delete notes</p>
+<p>It works well, but it is not very useful because nothing is being persisted</p>
+<p>Now we are going to add a database to the server</p>
+<h1 id="purescript-web-app-for-dummies-series">PureScript web app for dummies series</h1>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02 Mar 2022</td>
+<td>set up a basic HTTPure server</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-1/</a></td>
+</tr>
+<tr>
+<td>07 Mar 2022</td>
+<td>add a client side app</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-2/</a></td>
+</tr>
+<tr>
+<td>31 Mar 2022</td>
+<td>add a database, API, and unit tests</td>
+<td><a href="https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/">https://tiago.dalligna.com/2022/03/purescript-web-app-for-dummies-part-3/</a></td>
+</tr>
+<tr>
+<td>11 Apr 2022</td>
+<td>connect frontend client to the api</td>
+<td><a href="https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/">https://tiago.dalligna.com/2022/04/purescript-web-app-for-dummies-part-4/</a></td>
+</tr>
+</tbody>
+</table>
+<h1 id="prepare-your-project-to-sqlite">Prepare your project to sqlite</h1>
+<p>step 1: add sqlite to spago AND npm</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">spago</span> install sqlite3
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">npm</span> install sqlite3
+</span></span></code></pre></div><p>step 2: add *.db to your gitignore (you dont want to save your database in git).</p>
+<h1 id="add-a-database-access-file">Add a database access file</h1>
+<p>I will not paste the whole file here, but only the most important bits instead.</p>
+<p>We start with some helper functions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">module</span> Server.Database <span style="color:#66d9ef">where</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- This type is just a to add the Aff monad</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#66d9ef">InitDBType</span> a <span style="color:#f92672">=</span> forall m<span style="color:#f92672">.</span> <span style="color:#66d9ef">MonadAff</span> m <span style="color:#f92672">=&gt;</span> m a
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- So now we return our InitDBType together with the connection because of the Aff</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">openDb</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">InitDBType</span> <span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span><span style="color:#66d9ef">DBConnection</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">openDb</span> filename <span style="color:#f92672">=</span> liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span>newDB filename
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- just a helper to make queries (return values)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">query</span> <span style="color:#f92672">::</span> <span style="color:#960050;background-color:#1e0010">∀</span> a<span style="color:#f92672">.</span> <span style="color:#66d9ef">ReadForeign</span> a <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Aff</span> (<span style="color:#66d9ef">Array</span> a)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">query</span> sql params <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  db <span style="color:#f92672">&lt;-</span> init
+</span></span><span style="display:flex;"><span>  liftAff (<span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span>queryDB db sql (unsafeToForeign <span style="color:#f92672">&lt;$&gt;</span> params))
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;#&gt;</span> read
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&gt;&gt;&gt;</span> hush
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&gt;&gt;&gt;</span> fromMaybe <span style="color:#66d9ef">[]</span>
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- same as query, but it ignores the response</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">run</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">InitDBType</span> <span style="color:#66d9ef">Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">run</span> sql params <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  db <span style="color:#f92672">&lt;-</span> init
+</span></span><span style="display:flex;"><span>  liftAff <span style="color:#f92672">$</span> void <span style="color:#f92672">$</span> <span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span>queryDB db sql (unsafeToForeign <span style="color:#f92672">&lt;$&gt;</span> params)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- this is a poor man&#39;s migration runner</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">init</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">InitDBType</span> <span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span><span style="color:#66d9ef">DBConnection</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">init</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> dbFilename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;notes.db&#34;</span>
+</span></span><span style="display:flex;"><span>  (liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">FS</span><span style="color:#f92672">.</span>exists dbFilename) <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">_</span> <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>    false <span style="color:#f92672">-&gt;</span> createDb dbFilename <span style="color:#f92672">*&gt;</span> openDb dbFilename
+</span></span><span style="display:flex;"><span>    true <span style="color:#f92672">-&gt;</span> openDb dbFilename
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- and here the poor man&#39;s migrations</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">createDb</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">InitDBType</span> <span style="color:#66d9ef">Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">createDb</span> filename <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  db <span style="color:#f92672">&lt;-</span> liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span>newDB filename
+</span></span><span style="display:flex;"><span>  liftAff <span style="color:#f92672">$</span> <span style="color:#66d9ef">Sqlite</span><span style="color:#f92672">.</span>closeDB db
+</span></span><span style="display:flex;"><span>  run <span style="color:#e6db74">&#34;CREATE TABLE IF NOT EXISTS notes( title text, content text, createdAt text PRIMARY KEY);&#34;</span> <span style="color:#66d9ef">[]</span>
+</span></span></code></pre></div><p>This comments are not saved in the github.
+Should I put it there?
+It feels a bit too much&hellip;</p>
+<p>anyway, this is how to use it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#75715e">-- the query result will be automatically parsed to the return type (Array Note)</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getNotes</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Aff</span> (<span style="color:#66d9ef">Array</span> <span style="color:#66d9ef">Note</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">getNotes</span> str <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>  query <span style="color:#e6db74">&#34;SELECT * FROM notes&#34;</span> [ ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- to run a command is similar, but the return type is just Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">saveNote</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Note</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Aff</span> <span style="color:#66d9ef">Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">saveNote</span> note <span style="color:#f92672">=</span> 
+</span></span><span style="display:flex;"><span>  run
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      INSERT INTO notes (title, content, createdAt) VALUES (@title, @content, @createdAt)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      ON CONFLICT(createdAt) DO UPDATE SET title=@title, content=@content WHERE createdAt=@createdAt
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    [ note<span style="color:#f92672">.</span>title, note<span style="color:#f92672">.</span>content, note<span style="color:#f92672">.</span>createdAt ]
+</span></span></code></pre></div><p>Create an api file, nothing special, just parse the parameters and call the db, such as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">saveNote</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">ResponseM</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">saveNote</span> token body <span style="color:#f92672">=</span> <span style="color:#66d9ef">case</span> <span style="color:#66d9ef">JSON</span><span style="color:#f92672">.</span>readJSON body <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Right</span> (note <span style="color:#f92672">::</span> <span style="color:#66d9ef">Note</span>) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    notes <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">DB</span><span style="color:#f92672">.</span>saveNote note
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>ok <span style="color:#e6db74">&#34;ok&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Left</span> err <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>internalServerError (show err)
+</span></span></code></pre></div><p>Now we have to modify our Router to include this new Api endpoints</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">router</span> { body, query, headers, method, path } <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  bodyString <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span>toString body
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">case</span> method, path <span style="color:#66d9ef">of</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Get</span>, [ <span style="color:#e6db74">&#34;api&#34;</span>, <span style="color:#e6db74">&#34;notes&#34;</span> ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">API</span><span style="color:#f92672">.</span>getNotes <span style="color:#e6db74">&#34;token&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Post</span>, [ <span style="color:#e6db74">&#34;api&#34;</span>, <span style="color:#e6db74">&#34;note&#34;</span> ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">API</span><span style="color:#f92672">.</span>saveNote <span style="color:#e6db74">&#34;token&#34;</span> bodyString
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">HTTPure</span><span style="color:#f92672">.</span><span style="color:#66d9ef">Delete</span>, [ <span style="color:#e6db74">&#34;api&#34;</span>, <span style="color:#e6db74">&#34;note&#34;</span>, id ] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">API</span><span style="color:#f92672">.</span>deleteNote <span style="color:#e6db74">&#34;token&#34;</span> id
+</span></span></code></pre></div><p>Pretty straightforward, just call the api</p>
+<p>Except, while creating this, the new version of HTTPure is out, and body is not a string anymore.</p>
+<p>So that is why we had to create the <strong>bodyString</strong> value</p>
+<p>This is not too bad right?
+but how do we test it?</p>
+<p>well, we start with a simple Request using VS Code rest client:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#66d9ef">POST</span> http<span style="color:#66d9ef">://</span>localhost<span style="color:#66d9ef">:</span><span style="color:#ae81ff">8080</span><span style="color:#f92672">/</span>api<span style="color:#f92672">/</span>note
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>{ <span style="color:#e6db74">&#34;title&#34;</span><span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;the test note&#34;</span>
+</span></span><span style="display:flex;"><span>, <span style="color:#e6db74">&#34;content&#34;</span><span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;bla bla bla&#34;</span>
+</span></span><span style="display:flex;"><span>, <span style="color:#e6db74">&#34;createdAt&#34;</span><span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;2022-03-19T10:20:30&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GET</span> http<span style="color:#66d9ef">://</span>localhost<span style="color:#66d9ef">:</span><span style="color:#ae81ff">8080</span><span style="color:#f92672">/</span>api<span style="color:#f92672">/</span>notes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> http<span style="color:#66d9ef">://</span>localhost<span style="color:#66d9ef">:</span><span style="color:#ae81ff">8080</span><span style="color:#f92672">/</span>api<span style="color:#f92672">/</span>note<span style="color:#f92672">/</span><span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">03</span><span style="color:#f92672">-</span><span style="color:#ae81ff">19</span> 
+</span></span></code></pre></div><p>cool right?</p>
+<p>well, not really&hellip; it works but by now we should start thinking about something that has been so neglected so far</p>
+<h1 id="unit-testing">Unit testing</h1>
+<p>Unit testing in purs is quite simple. You add a lib, describe is just to group the similar tests.</p>
+<p>For each test include an it section describing the test.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Effect</span> <span style="color:#66d9ef">Unit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">main</span> <span style="color:#f92672">=</span> launchAff_ <span style="color:#f92672">$</span> runSpec [console reporter] <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">describe</span> <span style="color:#e6db74">&#34;DB&#34;</span> <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">it</span> <span style="color:#e6db74">&#34;insert&#34;</span> <span style="color:#66d9ef">do</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> note <span style="color:#f92672">=</span> { title<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;the test note&#34;</span>, content<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;bla bla bla&#34;</span>, createdAt<span style="color:#66d9ef">:</span> <span style="color:#e6db74">&#34;2022-03-19T10:20:30&#34;</span>} 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DB</span><span style="color:#f92672">.</span>saveNote note 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dbNotes</span> <span style="color:#f92672">&lt;-</span> <span style="color:#66d9ef">DB</span><span style="color:#f92672">.</span>getNotes <span style="color:#e6db74">&#34;&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dbNotes</span> `shouldContain` note
+</span></span></code></pre></div><p>I will just leave this test code here and link to the github</p>
+<p>It is pretty self explanatory</p>
+<p>PS: a function surrounded by backticks can be place in between 2 parameters for improved readability.
+ex:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">dbNotes</span> `shouldContain` note
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- is the same as</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">shouldContain</span> dbNotes note
+</span></span></code></pre></div><h1 id="conclusion">conclusion</h1>
+<p>This post thought you how to add an sqlite database to your app, adapt the api to serve it, and create unit tests.</p>
+<p>The code is available in <a href="https://github.com/pnorco/pnotes/releases/tag/v5">the tag v5 of our pnotes repo</a>.</p>
+<p>So far, so good.</p>
+<p>But&hellip; why is my app is still not saving/loading/deleting in/from the database?
+Well, our client side is not calling our API yet.
+But this will be fixed in the next post.</p>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>

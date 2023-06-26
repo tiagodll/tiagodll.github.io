@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So, what is elixir? &middot; Tiago on tech</title>
+
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="https://tiago.dalligna.com/resources/logo.png">
+
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="So, what is elixir? &middot; Tiago on tech">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="So, what is elixir? &middot; Tiago on tech">
+    <meta property="og:description" content="">
+
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
+
+    <link rel="stylesheet" href='https://tiago.dalligna.com/css/all.min.css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="alternate" type="application/rss+xml" title="Tiago on tech" href='https://tiago.dalligna.com/index.xml' />
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/blog.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/syntax-highlighter.css"/>
+    <link rel="stylesheet" href="https://tiago.dalligna.com/css/dark-theme.css"/>
+    
+</head>
+<body>
+
+
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-4">
+    <div class="header">
+        <hgroup>
+            <a href="https://tiago.dalligna.com/" style="display:block; text-align: center;"><img src="https://avatars.githubusercontent.com/u/600654" style="width:200px; max-width: 100%;" /></a>            
+            <h1 class="brand-title"><a href="https://tiago.dalligna.com/">Tiago on tech</a></h1>
+            <h2 class="brand-tagline"> My random thoughts and experiences </h2>
+        </hgroup>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/tiagodll">
+                        <i class="fa fa-github-alt"></i> Github
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://stackoverflow.com/u/392974">
+                        <i class="fa fa-stack-overflow"></i>Stack Overflow
+                    </a>
+                </li>
+                
+                
+                <li class="nav-item">
+                    <a class="pure-button" href="https://www.linkedin.com/in/tiagodll">
+                        <i class="fa fa-linkedin"></i> LinkedIn
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="pure-button" href='https://tiago.dalligna.com/index.xml'>
+                        <i class="fa fa-rss"></i> rss
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+    <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+            
+            <div class="posts">
+                <h1 class="content-subhead">23 Jun 2013, 17:15</h1>
+                <section class="post">
+                    <header class="post-header">
+
+                        <a href="https://tiago.dalligna.com/2013/06/so-what-is-elixir/" class="post-title">So, what is elixir?</a>
+
+                        <p class="post-meta">
+                            
+                            
+                                under 
+                                
+                                    <a class="post-category post-category-elixir" href='https://tiago.dalligna.com/tags/elixir'>elixir</a>
+                                
+                            
+                        </p>
+                    </header>
+                    <div class="post-description">
+                        <p><img src="https://lh5.googleusercontent.com/proxy/pDPq3cxOcMm97pAzmpbtcCsaSuq9iTcrJZuUH2YOQ7ggJAsCt8Q7nmpZJq5DFEaCOlnozSSQZBBwGbmkEIKN=s0-d" alt="Elixir logo"></p>
+<p>A bit of background first:
+In my masters I had a module called Programming Paradigms and Languages.
+What this module is about is the different paradigms, and one language for each of them.</p>
+<p>The chosen languages were:
+Object Oriented: Ruby
+Functional: Clojure
+Logical: Prolog
+Process Oriented: Erlang
+Mathematical Programming: Matlab</p>
+<p>Out of that what I can say is:</p>
+<pre><code>Ruby syntax is awesome. So elegant but there are many performance issues
+Clojure is very nice for the academic world, but I cant imagine anyone using it for commercial software building.
+Prolog. Ah, prolog... I have had a love/hate relationship with this since my undergrad. Powerful but very specific.
+Erlang: blazing fast. handle processes like no one else, but it is probably the worst syntax I've ever seen. Ok, not the worst, but close to that (Yes mind fuck, I didn't forget you)
+Matlab... this doesn't even had to be in this list
+</code></pre>
+<p>So, after that my conclusion is: I want a language able to handle many processes like erlang, but with a nice syntax like ruby and maybe add there some cool recursion features from clojure if you can.</p>
+<p>That is elixir.</p>
+<p>&ldquo;Elixir is a functional meta-programming aware language built on top of the Erlang VM. It is a dynamic language with flexible syntax with macros support that leverages Erlang&rsquo;s abilities to build concurrent, distributed, fault-tolerant applications with hot code upgrades.&rdquo;- <a href="http://elixir-lang.org/">http://elixir-lang.org/</a></p>
+<p>So, just like that it has become my favorite language.
+But just like all open source, making it work is always a hassle. But this is for the next post.</p>
+<p>Lets have an easy start: how to add Elixir to your path?
+I am new to the mac world, for those of you that like me are not great at this, let&rsquo;s go step by step:</p>
+<pre><code>check if it is already there: type &quot;echo $PATH&quot; on bash (capital letters)
+if elixir is there, you are good to go. if it is not, add it by typing
+echo 'PATH=$PATH:/Software/elixir/bin' &gt;&gt; ~/.bash_profile (I put it in the folder Software under root, use your path)
+close your bash and open it again. type iex, if you get the interactive shell, go ahead and play with it :)
+</code></pre>
+
+                    </div>
+                    <div id="pitaco" />
+                </section>
+            </div>
+            <div class="footer">
+    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+        <ul>
+            <li>Powered by <a class="hugo" href="https://gohugo.io/" target="_blank">hugo</a></li>
+        </ul>
+    </div>
+</div>
+
+<script data-id="matomo-tracking" data-matomo-tracking-url='https://matomo.dalligna.com' data-matomo-tracking-id='1' src="https://tiago.dalligna.com/js/matomo-tracking.min.d8e1498fb42aa6048c4db4ac8451d0141fe4a0a83a1b4857df2a67a0cabd350a.js" integrity="sha256-2OFJj7QqpgSMTbSshFHQFB/koKg6G0hX3ypnoMq9NQo=" crossorigin="anonymous" defer></script>
+<script src='https://tiago.dalligna.com/js/all.min.js'></script>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://pitaco.dalligna.com/js/pitaco.js"></script>
+<script type="text/javascript">
+	(function () {
+		pitaco("tiagodallignacom");
+	})();
+</script>
+
+
+
+
+</body>
+</html>
